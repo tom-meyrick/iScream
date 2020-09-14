@@ -98,22 +98,28 @@ class Accordian extends Component {
             <Card key={vendor.id}>
               <Card.Header className={`accord-${this.styleTab(index)}`}>
                 <Accordion.Toggle as={Button} variant="link" eventKey={index}>
-                  {vendor.name}
+                  <div className="accord-title">{vendor.name}</div>
                 </Accordion.Toggle>
               </Card.Header>
               <Accordion.Collapse eventKey={index}>
                 <Card.Body className={`accord-${this.styleBody(index)}`}>
-                  <div className="accord-body-row-1">
-                    <Profile
-                      url={vendor.imgUrl}
-                      color={this.styleProfile(index)}
-                    />
-                    <p className="col">{vendor.rating}</p>
-                    <p className="col">{vendor.priciness}</p>
-                  </div>
+                  <div className="accord-body">
+                    <div className="accord-body-row-1">
+                      <Profile
+                        url={vendor.imgUrl}
+                        color={this.styleProfile(index)}
+                      />
+                      <p className="col">{vendor.rating}</p>
+                      <p className="col">{vendor.priciness}</p>
+                      <img
+                        className="accord-waffle-texture"
+                        src={"../assets/waffle-texture.jpg"}
+                      />
+                    </div>
 
-                  <div className={"accord-bio"}>
-                    <p>{vendor.bio}</p>
+                    <div className={"accord-bio"}>
+                      <p>{vendor.bio}</p>
+                    </div>
                   </div>
                 </Card.Body>
               </Accordion.Collapse>
