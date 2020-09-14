@@ -24,6 +24,7 @@ class Accordian extends Component {
     });
   }
 
+<<<<<<< HEAD
   repeatStars(value) {
     const stars = [];
     for (let i = 0; i < value; i += 1) {
@@ -38,6 +39,14 @@ class Accordian extends Component {
       pounds.push(<img src="../assets/star-empty.png" alt="pounds"></img>);
     }
     return pounds;
+=======
+  repeatElements(value, src) {
+    const elements = [];
+    for (let i = 0; i < value; i += 1) {
+      elements.push(<img src={src} alt="stars"></img>);
+    }
+    return elements;
+>>>>>>> feature/accordian
   }
 
   styleTab = (i) => {
@@ -67,9 +76,17 @@ class Accordian extends Component {
               </Card.Header>
               <Accordion.Collapse eventKey={index}>
                 <Card.Body>
+<<<<<<< HEAD
                   <div className="row">{this.repeatStars(vendor.rating)}</div>
                   <div className="row">
                     {this.repeatPounds(vendor.priciness)}
+=======
+                  <div className="row">
+                    {this.repeatElements(vendor.rating, "asset")}
+                  </div>
+                  <div className="row">
+                    {this.repeatElements(vendor.priciness, "asset")}
+>>>>>>> feature/accordian
                   </div>
                   <img
                     className="rounded-circle"
