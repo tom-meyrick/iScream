@@ -42,7 +42,7 @@ class Accordian extends Component {
                 </div>
                 <img
                   className="rounded-circle"
-                  src={single.imgUrl}
+                  src="../assets/van01.png"
                   alt="An ice cream man"
                 ></img>
                 <h5>Bio</h5>
