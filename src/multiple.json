@@ -7,7 +7,9 @@
       "latitude": -2.5
     },
     "priciness": 1,
-    "rating": 5
+    "rating": 5,
+    "imgUrl": "https://github.com/tom-meyrick/iScream/blob/6f4ef09e85e9568eb09d300966ff525506ea50d0/src/assets/van01.png?raw=true",
+    "bio": "anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute non cupidatat skateboard dolor brunch. Food truck quino nesciunt laborum eiusmod."
   },
   {
     "id": 2,
@@ -17,7 +19,9 @@
       "latitude": -2.5
     },
     "priciness": 1,
-    "rating": 5
+    "rating": 5,
+    "imgUrl": "https://github.com/tom-meyrick/iScream/blob/6f4ef09e85e9568eb09d300966ff525506ea50d0/src/assets/van01.png?raw=true",
+    "bio": "anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute non cupidatat skateboard dolor brunch. Food truck quino nesciunt laborum eiusmod."
   },
   {
     "id": 3,
@@ -27,7 +31,9 @@
       "latitude": -2.5
     },
     "priciness": 1,
-    "rating": 5
+    "rating": 5,
+    "imgUrl": "https://github.com/tom-meyrick/iScream/blob/6f4ef09e85e9568eb09d300966ff525506ea50d0/src/assets/van01.png?raw=true",
+    "bio": "anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute non cupidatat skateboard dolor brunch. Food truck quino nesciunt laborum eiusmod."
   },
   {
     "id": 4,
@@ -37,6 +43,8 @@
       "latitude": -2.5
     },
     "priciness": 1,
-    "rating": 5
+    "rating": 5,
+    "imgUrl": "https://github.com/tom-meyrick/iScream/blob/6f4ef09e85e9568eb09d300966ff525506ea50d0/src/assets/van01.png?raw=true",
+    "bio": "anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute non cupidatat skateboard dolor brunch. Food truck quino nesciunt laborum eiusmod."
   }
 ]
