@@ -4,6 +4,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import multiple from "../multiple.json";
 import axios from "../axiosConfig";
+import Profile from "./Profile";
 
 class Accordian extends Component {
   constructor(props) {
@@ -39,6 +40,19 @@ class Accordian extends Component {
     return pounds;
   }
 
+  styleTab = (i) => {
+    const styles = ["pink", "caramel", "chocolate", "blue", "vanilla"];
+    return styles[i % styles.length];
+  };
+  styleBody = (i) => {
+    const styles = ["blue", "vanilla", "pink", "vanilla", "chocolate"];
+    return styles[i % styles.length];
+  };
+  styleProfile = (i) => {
+    const styles = ["caramel", "chocolate", "blue", "pink", "vanilla"];
+    return styles[i % styles.length];
+  };
+
   render() {
     // let { loaded, vendors } = this.state;
     return (
@@ -46,9 +60,9 @@ class Accordian extends Component {
         <Accordion defaultActiveKey="0">
           {multiple.map((vendor, index) => (
             <Card key={vendor.id}>
-              <Card.Header>
+              <Card.Header className={`accord-${this.styleTab(index)}`}>
                 <Accordion.Toggle as={Button} variant="link" eventKey={index}>
-                  {vendor.name}
+                  <div className="accord-title">{vendor.name}</div>
                 </Accordion.Toggle>
               </Card.Header>
               <Accordion.Collapse eventKey={index}>
