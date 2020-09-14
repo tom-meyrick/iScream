@@ -17,10 +17,13 @@ class Accordian extends Component {
             </Card.Header>
             <Accordion.Collapse eventKey="0">
               <Card.Body>
-                {single.rating}
-                {single.priciness}
-                <img src={single.imgUrl}></img>
-                Biography: {single.bio}
+                <div className="row">
+                  <p className="col">{single.rating}</p>
+                  <p className="col">{single.priciness}</p>
+                </div>
+                <img className="rounded-circle" src={single.imgUrl}></img>
+                <h5>Bio</h5>
+                <p>{single.bio}</p>
               </Card.Body>
             </Accordion.Collapse>
           </Card>
