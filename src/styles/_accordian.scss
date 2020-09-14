@@ -1,0 +1,55 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.accord-blue {
+  background-color: var(--accord-blue);
+}
+.accord-pink {
+  background-color: var(--accord-pink);
+}
+.accord-vanilla {
+  background-color: var(--accord-vanilla);
+}
+.accord-caramel {
+  background-color: var(--accord-caramel);
+}
+.accord-chocolate {
+  background-color: var(--accord-chocolate);
+}
+
+.accord-title {
+  background-color: rgba(255, 255, 200, 0.3);
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.accord-tub {
+  padding: 0.5rem;
+  border: 1px solid lightcoral;
+  border-radius: 10px;
+}
+
+.accord-body-row-1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-body {
+  padding: 2rem;
+}
+.accord-body {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 240, 255, 0.2);
+  padding: 1rem;
+}
+
+.accord-body-bio {
+  background-color: rgba(255, 240, 255, 0.3);
+  margin: auto;
+  max-width: 75%;
+  padding: 2rem;
+}
