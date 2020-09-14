@@ -5,6 +5,7 @@ import Button from "react-bootstrap/Button";
 import multiple from "../multiple.json";
 import axios from "../axiosConfig";
 import Profile from "./Profile";
+import star from "../assets/star-full.png";
 
 class Accordian extends Component {
   constructor(props) {
@@ -24,29 +25,12 @@ class Accordian extends Component {
     });
   }
 
-<<<<<<< HEAD
-  repeatStars(value) {
-    const stars = [];
-    for (let i = 0; i < value; i += 1) {
-      stars.push(<img src="../assets/star-full.png" alt="stars"></img>);
-    }
-    return stars;
-  }
-
-  repeatPounds(value) {
-    const pounds = [];
-    for (let i = 0; i < value; i += 1) {
-      pounds.push(<img src="../assets/star-empty.png" alt="pounds"></img>);
-    }
-    return pounds;
-=======
   repeatElements(value, src) {
     const elements = [];
     for (let i = 0; i < value; i += 1) {
       elements.push(<img src={src} alt="stars"></img>);
     }
     return elements;
->>>>>>> feature/accordian
   }
 
   styleTab = (i) => {
@@ -64,6 +48,7 @@ class Accordian extends Component {
 
   render() {
     // let { loaded, vendors } = this.state;
+    let { star } = this.props;
     return (
       <div className="container">
         <Accordion defaultActiveKey="0">
@@ -76,17 +61,12 @@ class Accordian extends Component {
               </Card.Header>
               <Accordion.Collapse eventKey={index}>
                 <Card.Body>
-<<<<<<< HEAD
-                  <div className="row">{this.repeatStars(vendor.rating)}</div>
-                  <div className="row">
-                    {this.repeatPounds(vendor.priciness)}
-=======
-                  <div className="row">
-                    {this.repeatElements(vendor.rating, "asset")}
-                  </div>
-                  <div className="row">
+                  <div className="row float-right">
+                    {this.repeatElements(
+                      vendor.rating,
+                      "../assets/star-full.png"
+                    )}
                     {this.repeatElements(vendor.priciness, "asset")}
->>>>>>> feature/accordian
                   </div>
                   <img
                     className="rounded-circle"
