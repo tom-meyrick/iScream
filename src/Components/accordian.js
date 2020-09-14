@@ -5,7 +5,6 @@ import Button from "react-bootstrap/Button";
 import multiple from "../multiple.json";
 import axios from "../axiosConfig";
 import Profile from "./Profile";
-import star from "../assets/star-full.png";
 
 class Accordian extends Component {
   constructor(props) {
@@ -48,7 +47,6 @@ class Accordian extends Component {
 
   render() {
     // let { loaded, vendors } = this.state;
-    let { star } = this.props;
     return (
       <div className="container">
         <Accordion defaultActiveKey="0">
@@ -64,7 +62,7 @@ class Accordian extends Component {
                   <div className="row float-right">
                     {this.repeatElements(
                       vendor.rating,
-                      "../assets/star-full.png"
+                      require("../assets/star-full.png")
                     )}
                     {this.repeatElements(vendor.priciness, "asset")}
                   </div>
