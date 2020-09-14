@@ -5,6 +5,7 @@ import Button from "react-bootstrap/Button";
 import single from "../single.json";
 import multiple from "../multiple.json";
 import axios from "../axiosConfig";
+import Profile from "./Profile";
 
 // class Accordian extends Component {
 //   constructor(props) {
@@ -75,6 +76,19 @@ class Accordian extends Component {
     });
   }
 
+  styleTab = (i) => {
+    const styles = ["pink", "caramel", "chocolate", "blue", "vanilla"];
+    return styles[i % styles.length];
+  };
+  styleBody = (i) => {
+    const styles = ["blue", "vanilla", "pink", "vanilla", "chocolate"];
+    return styles[i % styles.length];
+  };
+  styleProfile = (i) => {
+    const styles = ["caramel", "chocolate", "blue", "pink", "vanilla"];
+    return styles[i % styles.length];
+  };
+
   render() {
     let { loaded, vendors } = this.state;
     return (
@@ -82,24 +96,25 @@ class Accordian extends Component {
         <Accordion defaultActiveKey="0">
           {multiple.map((vendor, index) => (
             <Card key={vendor.id}>
-              <Card.Header>
+              <Card.Header className={`accord-${this.styleTab(index)}`}>
                 <Accordion.Toggle as={Button} variant="link" eventKey={index}>
                   {vendor.name}
                 </Accordion.Toggle>
               </Card.Header>
               <Accordion.Collapse eventKey={index}>
-                <Card.Body>
-                  <div className="row">
+                <Card.Body className={`accord-${this.styleBody(index)}`}>
+                  <div className="accord-body-row-1">
+                    <Profile
+                      url={vendor.imgUrl}
+                      color={this.styleProfile(index)}
+                    />
                     <p className="col">{vendor.rating}</p>
                     <p className="col">{vendor.priciness}</p>
                   </div>
-                  <img
-                    className="rounded-circle"
-                    src={vendor.imgUrl}
-                    alt="An ice cream man"
-                  ></img>
-                  <h5>Bio</h5>
-                  <p>{vendor.bio}</p>
+
+                  <div className={"accord-bio"}>
+                    <p>{vendor.bio}</p>
+                  </div>
                 </Card.Body>
               </Accordion.Collapse>
             </Card>
