@@ -1,3 +1,4 @@
+import "./styles/main.scss";
 import React from "react";
 import Heading from "./Components/Heading";
 import LeafletMap from "./Components/LeafletMap";
