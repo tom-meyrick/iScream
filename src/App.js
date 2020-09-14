@@ -6,9 +6,14 @@ import SideBar from "./Components/SideBar";
 
 const App = () => (
   <>
-    <h1>Project Library</h1>
-    <hr></hr>
-    <Heading />
+    <div className="container">
+      <h1>Project Library</h1>
+      <hr></hr>
+      <h5>Title</h5>
+      <Heading />
+      <h5>Accordian</h5>
+      <Accordian />
+    </div>
   </>
 );
 
