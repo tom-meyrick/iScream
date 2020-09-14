@@ -7,6 +7,7 @@ import SideBar from "./Components/SideBar";
 const App = () => (
   <>
     <h1>Project Library</h1>
+    <hr></hr>
     <Heading />
   </>
 );
