@@ -48,6 +48,7 @@ class LeafletMap extends Component {
   vendorMarker = L.icon({
     iconUrl: vanMarker,
     iconAnchor: [48, 92],
+    popupAnchor: [0, -85],
   });
   usrMarker = L.icon({
     iconUrl: usrMarker,
