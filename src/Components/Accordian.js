@@ -27,7 +27,9 @@ class Accordian extends Component {
   repeatElements(value, src, description, alt) {
     const elements = [];
     for (let i = 0; i < value; i += 1) {
-      elements.push(<img src={src} className={description} alt={alt}></img>);
+      elements.push(
+        <img src={src} className={description} alt={alt} key={i}></img>
+      );
     }
     return elements;
   }
@@ -63,7 +65,7 @@ class Accordian extends Component {
                   className={"accord-title"}
                 >
                   {vendor.name}
-                  <div class={"accord-waffle-texture"}></div>
+                  <div className={"accord-waffle-texture"}></div>
                 </Accordion.Toggle>
               </Card.Header>
               <Accordion.Collapse eventKey={vendor.id}>
