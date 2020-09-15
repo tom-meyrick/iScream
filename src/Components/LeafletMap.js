@@ -37,7 +37,7 @@ class LeafletMap extends Component {
     const { vendors } = this.state;
     return (
       <Map
-        className={"map"}
+        className={"map" + " " + this.props.className}
         center={[view.lat, view.lon]}
         zoom={view.zoom}
         minZoom={10}
@@ -54,9 +54,7 @@ class LeafletMap extends Component {
               position={[longitude, latitude]}
               icon={this.marker}
             >
-              <Popup>
-                A pretty CSS3 popup. <br /> Easily customizable.
-              </Popup>
+              <Popup></Popup>
             </Marker>
           );
         })}

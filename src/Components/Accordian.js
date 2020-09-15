@@ -33,22 +33,22 @@ class Accordian extends Component {
   }
 
   styleTab = (i) => {
-    const styles = ["pink", "caramel", "chocolate", "blue", "vanilla"];
+    const styles = ["pink", "caramel", "chocolate", "blue", "lime"];
     return styles[i % styles.length];
   };
   styleBody = (i) => {
-    const styles = ["blue", "vanilla", "pink", "vanilla", "chocolate"];
+    const styles = ["blue", "lime", "pink", "lime", "chocolate"];
     return styles[i % styles.length];
   };
   styleProfile = (i) => {
-    const styles = ["caramel", "chocolate", "blue", "pink", "vanilla"];
+    const styles = ["caramel", "chocolate", "blue", "pink", "lime"];
     return styles[i % styles.length];
   };
 
   render() {
     // let { loaded, vendors } = this.state;
     return (
-      <div className="container accord-tub">
+      <div className={this.props.className}>
         <Accordion defaultActiveKey="0">
           {multiple.map((vendor, index) => (
             <Card key={vendor.id}>
@@ -59,8 +59,9 @@ class Accordian extends Component {
                   as={Button}
                   variant="link"
                   eventKey={vendor.id}
+                  className={"accord-title"}
                 >
-                  <h2 className="accord-title">{vendor.name}</h2>
+                  {vendor.name}
                   <div class={"accord-waffle-texture"}></div>
                 </Accordion.Toggle>
               </Card.Header>
