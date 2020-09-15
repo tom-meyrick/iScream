@@ -54,11 +54,11 @@
     z-index: 2;
     color: yellow;
     text-shadow: 1px 1px 1px palevioletred;
-    transition: 0.3s font-size ease;
+    transition: 0.3s padding ease;
 
     &:hover {
       color: yellow;
-      font-size: 1.1rem;
+      padding: 0.7rem;
     }
   }
 
