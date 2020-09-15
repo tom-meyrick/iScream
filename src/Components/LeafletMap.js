@@ -82,7 +82,11 @@ class LeafletMap extends Component {
         {multiple.map((vendor) => {
           const { latitude, longitude } = vendor.location;
           return (
-            <Marker position={[latitude, longitude]} icon={this.vendorMarker}>
+            <Marker
+              position={[latitude, longitude]}
+              icon={this.vendorMarker}
+              key={vendor.id}
+            >
               <Popup>
                 <p>Name: {vendor.name}</p>
                 <p>Rating: {vendor.rating}/5</p>
