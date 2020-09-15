@@ -60,15 +60,23 @@ class Accordian extends Component {
               <Accordion.Collapse eventKey={index}>
                 <Card.Body>
                   <div className="row float-right">
-                    {this.repeatElements(
-                      vendor.rating,
-                      require("../assets/star-full.png")
-                    )}
-                    {this.repeatElements(vendor.priciness, "asset")}
+                    <div className="col">
+                      {this.repeatElements(
+                        vendor.rating,
+                        require("../assets/star-full.png")
+                      )}
+                    </div>
+                    <div class="w-100"></div>
+                    <div className="col">
+                      {this.repeatElements(
+                        vendor.priciness,
+                        require("../assets/star-empty.png")
+                      )}
+                    </div>
                   </div>
                   <img
                     className="rounded-circle"
-                    src={"../assets/van01.png"}
+                    src={require("../assets/van01.png")}
                     alt="An ice cream man"
                   ></img>
                   <h5>Bio</h5>
