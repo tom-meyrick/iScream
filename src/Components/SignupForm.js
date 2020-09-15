@@ -24,6 +24,7 @@ class SignupForm extends Component {
     this.handleRating = this.handleRating.bind(this);
     this.handleImg = this.handleImg.bind(this);
     this.handleBio = this.handleBio.bind(this);
+    this.handleIceCream = this.handleIceCream.bind(this);
   }
   handleClick = (e) => {
     e.preventDefault();
@@ -55,6 +56,7 @@ class SignupForm extends Component {
           rating: "",
           imgUrl: "",
           bio: "",
+          iceCream: "",
         });
       })
       .catch((error) => {
@@ -83,6 +85,9 @@ class SignupForm extends Component {
   handleBio(e) {
     this.setState({ bio: e.currentTarget.value });
   }
+  handleIceCream(e) {
+    this.setState({ iceCream: e.currentTarget.value });
+  }
 
   render() {
     let { handleClick } = this.props;
@@ -94,6 +99,7 @@ class SignupForm extends Component {
       rating,
       imgUrl,
       bio,
+      iceCream,
     } = this.state;
     return (
       <Form>
@@ -158,6 +164,15 @@ class SignupForm extends Component {
             placeholder="Tell us about yourself"
             onChange={this.handleBio}
             value={bio}
+          />
+        </Form.Group>
+        <Form.Group controlId="formIceCream">
+          <Form.Label>Ice Cream</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Magnum, Zoom, Lemon sorbet..."
+            onChange={this.handleIceCream}
+            value={iceCream}
           />
         </Form.Group>
         <Button variant="primary" type="submit" onClick={(e) => handleClick(e)}>
