@@ -53,11 +53,15 @@ class Accordian extends Component {
           {multiple.map((vendor, index) => (
             <Card key={vendor.id}>
               <Card.Header className={`accord-${this.styleTab(index)}`}>
-                <Accordion.Toggle as={Button} variant="link" eventKey={index}>
+                <Accordion.Toggle
+                  as={Button}
+                  variant="link"
+                  eventKey={vendor.id}
+                >
                   <div className="accord-title">{vendor.name}</div>
                 </Accordion.Toggle>
               </Card.Header>
-              <Accordion.Collapse eventKey={index}>
+              <Accordion.Collapse eventKey={vendor.id}>
                 <Card.Body>
                   <div className="row float-right">
                     <div className="col">
