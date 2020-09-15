@@ -33,15 +33,15 @@ class Accordian extends Component {
   }
 
   styleTab = (i) => {
-    const styles = ["pink", "caramel", "chocolate", "blue", "vanilla"];
+    const styles = ["pink", "caramel", "chocolate", "blue", "lime"];
     return styles[i % styles.length];
   };
   styleBody = (i) => {
-    const styles = ["blue", "vanilla", "pink", "vanilla", "chocolate"];
+    const styles = ["blue", "lime", "pink", "lime", "chocolate"];
     return styles[i % styles.length];
   };
   styleProfile = (i) => {
-    const styles = ["caramel", "chocolate", "blue", "pink", "vanilla"];
+    const styles = ["caramel", "chocolate", "blue", "pink", "lime"];
     return styles[i % styles.length];
   };
 
