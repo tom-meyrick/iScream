@@ -74,7 +74,7 @@ class Accordian extends Component {
                     <div className={"accord-row-1"}>
                       <img
                         className={`van-img-${this.styleProfile(index)}`}
-                        src={require("../assets/van01.png")}
+                        src={vendor.imgUrl}
                         alt="An ice cream man"
                       />
                       <div className="star-container">
