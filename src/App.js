@@ -12,12 +12,12 @@ const App = () => (
       <hr></hr>
       <h5>Title</h5>
       <Heading />
+      <LeafletMap />
       <h5>Accordian</h5>
       <Accordian />
       <h5>SideBar</h5>
       <SideBar />
       <h5>Map</h5>
-      <LeafletMap />
     </div>
   </>
 );
