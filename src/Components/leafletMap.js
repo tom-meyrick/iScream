@@ -10,7 +10,7 @@ class LeafletMap extends Component {
   }
 
   componentDidMount() {
-    axios.get(`/data`).then(({ data }) => {
+    axios.get(`/vendors`).then(({ data }) => {
       this.setState({
         vendors: data.data,
       });

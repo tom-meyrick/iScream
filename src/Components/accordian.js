@@ -16,7 +16,7 @@ class Accordian extends Component {
   }
 
   componentDidMount() {
-    axios.get(`/${this.id}/data`).then(({ data }) => {
+    axios.get(`/vendors`).then(({ data }) => {
       this.setState({
         loaded: true,
         vendors: data.data,
