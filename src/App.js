@@ -14,7 +14,7 @@ const App = () => (
       <Heading />
       <LeafletMap />
       <h5>Accordian</h5>
-      <Accordian />
+      {/* <Accordian /> */}
       <h5>SideBar</h5>
       <SideBar />
       <h5>Map</h5>
