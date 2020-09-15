@@ -15,8 +15,8 @@
     "id": 2,
     "name": "mr ice cream",
     "location": {
-      "longitude": 51.5,
-      "latitude": -2.5
+      "longitude": 51.446758,
+      "latitude": -2.631703
     },
     "priciness": 1,
     "rating": 2,
@@ -27,8 +27,8 @@
     "id": 3,
     "name": "mr ice cream",
     "location": {
-      "longitude": 51.5,
-      "latitude": -2.5
+      "longitude": 51.455899,
+      "latitude": -2.586947
     },
     "priciness": 1,
     "rating": 3,
@@ -39,8 +39,8 @@
     "id": 4,
     "name": "mr ice cream",
     "location": {
-      "longitude": 51.5,
-      "latitude": -2.5
+      "longitude": 51.438101,
+      "latitude": -2.585755
     },
     "priciness": 1,
     "rating": 4,

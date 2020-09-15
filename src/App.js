@@ -14,13 +14,14 @@ const App = () => (
       <h5>Title</h5>
       <Heading />
       <h5>Accordian</h5>
-      <Accordian />
+      {/* <Accordian /> */}
       <h5>SideBar</h5>
       <SideBar />
       <h5>Map</h5>
       <LeafletMap />
       <h5>Form</h5>
       <SignupForm />
+
     </div>
   </>
 );
