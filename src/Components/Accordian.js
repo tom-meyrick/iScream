@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import multiple from "../multiple.json";
 import axios from "../axiosConfig";
-import Profile from "./Profile";
+// import Profile from "./Profile";
 
 class Accordian extends Component {
   constructor(props) {
