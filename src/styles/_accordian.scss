@@ -1,7 +1,6 @@
 .main {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
 }
 
 .accord {
@@ -9,7 +8,6 @@
     display: block;
     position: relative;
     z-index: 1;
-    max-height: 75px;
   }
   &-waffle-texture {
     position: absolute;
@@ -20,13 +18,11 @@
     background-image: url("../assets/waffle-texture.jpg");
     opacity: 0.1;
     z-index: -1;
-    border: 1px red solid;
   }
 
   &-body {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
     z-index: 2;
   }
 
@@ -45,20 +41,25 @@
   &-chocolate {
     background-color: var(--accord-chocolate);
   }
-
-  &-title {
-    background-color: rgba(255, 255, 200, 0.3);
-    border-radius: 1rem;
-    padding: 0.5rem;
-    color: red;
-    z-index: 2;
-    font-family: "Quicksand", sans-serif;
+  &-lime {
+    background-color: var(--accord-lime);
   }
 
-  &-tub {
+  &-title {
+    background-color: rgba(255, 218, 185, 0.5);
+    border-radius: $b-radius;
     padding: 0.5rem;
-    border: 1px solid lightcoral;
-    border-radius: 10px;
+    // font-family: $font-head;
+    font-size: 1rem;
+    z-index: 2;
+    color: yellow;
+    text-shadow: 2px 2px 1px palevioletred;
+    transition: 0.3s font-size ease;
+
+    &:hover {
+      color: yellow;
+      font-size: 1.1rem;
+    }
   }
 
   &-row-1 {

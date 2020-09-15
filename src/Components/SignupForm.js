@@ -102,7 +102,7 @@ class SignupForm extends Component {
       iceCream,
     } = this.state;
     return (
-      <Form>
+      <Form className={this.props.className}>
         <Form.Group controlId="formName">
           <Form.Label>Name</Form.Label>
           <Form.Control

@@ -37,7 +37,7 @@ class LeafletMap extends Component {
     const { vendors } = this.state;
     return (
       <Map
-        className={"map"}
+        className={"map" + " " + this.props.className}
         center={[view.lat, view.lon]}
         zoom={view.zoom}
         minZoom={10}
@@ -61,6 +61,7 @@ class LeafletMap extends Component {
                   Click here
                 </a>
               </Popup>
+
             </Marker>
           );
         })}
