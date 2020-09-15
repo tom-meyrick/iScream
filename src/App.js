@@ -8,20 +8,17 @@ import SignupForm from "./Components/SignupForm";
 
 const App = () => (
   <>
-    <div className="container">
-      <h1>Pattern Library</h1>
-      <hr></hr>
-      <h5>Title</h5>
-      <Heading />
-      <h5>Accordian</h5>
-      {/* <Accordian /> */}
-      <h5>SideBar</h5>
-      <SideBar />
-      <h5>Map</h5>
-      <LeafletMap />
-      <h5>Form</h5>
-      <SignupForm />
-
+    <div className="page-wrapper">
+      <div className={"main__side-panels"}> </div>
+      <div className={"main__container container"}>
+        <Heading />
+        <LeafletMap />
+        <Accordian />
+        <SideBar />
+        <h5>Form</h5>
+        <SignupForm />
+      </div>
+      <div className={"main__side-panels"}> </div>
     </div>
   </>
 );
