@@ -48,7 +48,7 @@ class Accordian extends Component {
   render() {
     // let { loaded, vendors } = this.state;
     return (
-      <div className="container accord-tub">
+      <div className={this.props.className}>
         <Accordion defaultActiveKey="0">
           {multiple.map((vendor, index) => (
             <Card key={vendor.id}>

@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Damion&display=swap");
 
 :root {
   font-family: "Quicksand", sans-serif;
+}
+
+.logo {
+  font-family: "Damion", cursive;
+  font-size: 160px;
+  color: yellow;
+  text-shadow: 5px 5px 1px palevioletred;
+  margin: auto;
+  background-color: peachpuff;
+  padding: 0.5rem 4rem;
+  border-radius: $b-radius;
 }

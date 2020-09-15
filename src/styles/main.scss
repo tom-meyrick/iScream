@@ -1,6 +1,6 @@
+@import "settings";
 @import "reset";
 @import "typography";
-@import "settings";
 @import "accordian";
 @import "van-image";
 @import "icons";
@@ -8,6 +8,7 @@
 
 .page-wrapper {
   padding: 1rem;
+  border-radius: $b-radius;
 }
 
 @media (min-width: $breakpoint-tablet) {
@@ -22,12 +23,21 @@
   &__container {
     max-width: 800px;
     padding: 2rem;
+    border-radius: $b-radius;
     background-color: var(--accord-vanilla);
     margin: auto;
+    display: flex;
+    flex-direction: column;
   }
   &__side-panels {
     // background-color: #fdb2f2;
     background-image: url("../assets/sprinkles-texture02.jpg");
-    opacity: 0.6;
+    opacity: 0.7;
+    border-radius: $b-radius;
+  }
+  &__elem {
+    border-radius: $b-radius;
+    margin-top: 1rem;
+    border: 0.2rem white solid;
   }
 }
