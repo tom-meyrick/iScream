@@ -8,7 +8,6 @@
     display: block;
     position: relative;
     z-index: 1;
-    max-height: 75px;
   }
   &-waffle-texture {
     position: absolute;
@@ -47,12 +46,20 @@
   }
 
   &-title {
-    background-color: rgba(255, 255, 200, 0.3);
-    border-radius: 1rem;
+    background-color: rgba(255, 218, 185, 0.5);
+    border-radius: $b-radius;
     padding: 0.5rem;
-    color: red;
+    // font-family: $font-head;
+    font-size: 1rem;
     z-index: 2;
-    font-family: "Quicksand", sans-serif;
+    color: yellow;
+    text-shadow: 2px 2px 1px palevioletred;
+    transition: 0.3s font-size ease;
+
+    &:hover {
+      color: yellow;
+      font-size: 1.1rem;
+    }
   }
 
   &-row-1 {

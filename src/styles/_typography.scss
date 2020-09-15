@@ -5,8 +5,10 @@
   font-family: "Quicksand", sans-serif;
 }
 
+$font-head: "Damion", cursive;
+
 .logo {
-  font-family: "Damion", cursive;
+  font-family: $font-head;
   font-size: 160px;
   color: yellow;
   text-shadow: 5px 5px 1px palevioletred;

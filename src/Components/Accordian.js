@@ -59,8 +59,9 @@ class Accordian extends Component {
                   as={Button}
                   variant="link"
                   eventKey={vendor.id}
+                  className={"accord-title"}
                 >
-                  <h2 className="accord-title">{vendor.name}</h2>
+                  {vendor.name}
                   <div class={"accord-waffle-texture"}></div>
                 </Accordion.Toggle>
               </Card.Header>
