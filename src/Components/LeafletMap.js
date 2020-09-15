@@ -55,7 +55,11 @@ class LeafletMap extends Component {
               icon={this.marker}
             >
               <Popup>
-                A pretty CSS3 popup. <br /> Easily customizable.
+                <p>Name: {vendor.name}</p>
+                <p>Rating: {vendor.rating}/5</p>
+                <a onClick={console.log} href={"#" + vendor.id}>
+                  Click here
+                </a>
               </Popup>
             </Marker>
           );

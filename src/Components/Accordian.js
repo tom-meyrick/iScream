@@ -49,7 +49,7 @@ class Accordian extends Component {
     // let { loaded, vendors } = this.state;
     return (
       <div className="container accord-tub">
-        <Accordion defaultActiveKey="0">
+        <Accordion defaultActiveKey={2}>
           {multiple.map((vendor, index) => (
             <Card key={vendor.id}>
               <Card.Header
@@ -59,6 +59,7 @@ class Accordian extends Component {
                   as={Button}
                   variant="link"
                   eventKey={vendor.id}
+                  id={vendor.id}
                 >
                   <h2 className="accord-title">{vendor.name}</h2>
                   <div class={"accord-waffle-texture"}></div>
