@@ -10,10 +10,33 @@ class LeafletMap extends Component {
     super(props);
     this.state = {
       vendors: [],
+      userPos: {
+        lat: 0.0,
+        lon: 0.0,
+      },
     };
+
+    this.getLocale = this.getLocale.bind(this);
+  }
+
+  getLocale() {
+    return navigator.geolocation.getCurrentPosition((position) => {
+      this.setState({
+        userPos: {
+          lat: position.coords.latitude,
+          lon: position.coords.longitude,
+        },
+      });
+    });
   }
 
   componentDidMount() {
+    if ("geolocation" in navigator) {
+      this.getLocale();
+    } else {
+      console.log("Not Available");
+    }
+
     axios.get(`/vendors`).then(({ data }) => {
       this.setState({
         vendors: data.data,
@@ -61,7 +84,6 @@ class LeafletMap extends Component {
                   Click here
                 </a>
               </Popup>
-
             </Marker>
           );
         })}
