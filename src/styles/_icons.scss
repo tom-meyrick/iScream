@@ -22,6 +22,7 @@
 
 .star-container {
   display: flex;
+  justify-items: center;
   flex-direction: row;
   align-self: center;
   margin: auto;
@@ -32,6 +33,13 @@
 }
 
 .star--empty {
-  max-width: 51px;
+  max-width: 50px;
   max-height: 50px;
 }
+
+@media (max-width: $breakpoint-tablet) {
+  .star--full {
+    max-width: 36px;
+    max-height: 36px;
+  }
+} ;

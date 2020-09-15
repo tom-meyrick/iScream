@@ -12,7 +12,7 @@ const App = () => (
         <h1 className={"logo main__elem"}>iScream</h1>
         <LeafletMap className={"main__elem"} />
         <Accordian className={"main__elem"} />
-        <SignupForm className={"main__elem"} />
+        {/* <SignupForm className={"main__elem"} /> */}
       </div>
       <div className={"main__side-panels"}> </div>
     </div>

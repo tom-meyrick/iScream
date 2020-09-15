@@ -81,7 +81,7 @@
   }
 }
 
-@media (max-width: $breakpoint-handheld) {
+@media (max-width: $breakpoint-tablet) {
   .accord {
     &-row-1 {
       flex-direction: column;
