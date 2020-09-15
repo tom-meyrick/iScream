@@ -9,11 +9,28 @@ $font-head: "Damion", cursive;
 
 .logo {
   font-family: $font-head;
-  font-size: 160px;
   color: yellow;
-  text-shadow: 5px 5px 1px palevioletred;
   margin: auto;
+  text-shadow: 1px 1px 0px palevioletred;
   background-color: peachpuff;
-  padding: 0.5rem 4rem;
   border-radius: $b-radius;
+  padding: 1rem;
+  font-size: 2rem;
 }
+
+@media (min-width: $breakpoint-small) and (max-width: $breakpoint-tablet) {
+  .logo {
+    text-shadow: 3px 3px 1px palevioletred;
+    padding: 1rem;
+    font-size: 3rem;
+  }
+}
+@media (min-width: $breakpoint-tablet) {
+  .logo {
+    text-shadow: 5px 5px 1px palevioletred;
+    padding: 0.5rem 2rem;
+    padding: 2rem;
+    font-size: 85px;
+  }
+}
+// font-size: 160px;
