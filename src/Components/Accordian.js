@@ -24,10 +24,10 @@ class Accordian extends Component {
     });
   }
 
-  repeatElements(value, src) {
+  repeatElements(value, src, description, alt) {
     const elements = [];
     for (let i = 0; i < value; i += 1) {
-      elements.push(<img src={src} className={"star--full"} alt="stars"></img>);
+      elements.push(<img src={src} className={description} alt={alt}></img>);
     }
     return elements;
   }
@@ -76,14 +76,18 @@ class Accordian extends Component {
                       <div className="star-container">
                         {this.repeatElements(
                           vendor.rating,
-                          require("../assets/star-full.png")
+                          require("../assets/star-full.png"),
+                          "star--full",
+                          "stars"
                         )}
                       </div>
                       <div class="w-100"></div>
                       <div className="col">
                         {this.repeatElements(
                           vendor.priciness,
-                          require("../assets/pound-02.png")
+                          require("../assets/pound-02.png"),
+                          "pound",
+                          "pound coin"
                         )}
                       </div>
                     </div>
