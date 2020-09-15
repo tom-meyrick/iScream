@@ -32,6 +32,12 @@
   padding: 0.2rem;
 }
 
+.star-container {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  margin-right: auto;
+}
 .star--full {
   max-width: 56px;
   max-height: 56px;

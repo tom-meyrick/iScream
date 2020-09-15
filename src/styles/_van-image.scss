@@ -1,3 +1,5 @@
+$border-width: 7px;
+
 .van-img {
   width: 100px;
   height: 100px;
@@ -6,22 +8,24 @@
   &:hover {
     transform: scale(1.05);
   }
-}
-
-$border-width: 7px;
-
-.border-blue {
-  border: $border-width solid var(--accord-blue);
-}
-.border-pink {
-  border: $border-width solid var(--accord-pink);
-}
-.border-vanilla {
-  border: 0.6rem solid var(--accord-vanilla);
-}
-.border-caramel {
-  border: $border-width solid var(--accord-caramel);
-}
-.border-chocolate {
-  border: $border-width solid var(--accord-chocolate);
+  &-blue {
+    @extend .van-img;
+    border: $border-width solid var(--accord-blue);
+  }
+  &-pink {
+    @extend .van-img;
+    border: $border-width solid var(--accord-pink);
+  }
+  &-vanilla {
+    @extend .van-img;
+    border: 0.6rem solid var(--accord-vanilla);
+  }
+  &-caramel {
+    @extend .van-img;
+    border: $border-width solid var(--accord-caramel);
+  }
+  &-chocolate {
+    @extend .van-img;
+    border: $border-width solid var(--accord-chocolate);
+  }
 }

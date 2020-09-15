@@ -27,7 +27,7 @@ class Accordian extends Component {
   repeatElements(value, src) {
     const elements = [];
     for (let i = 0; i < value; i += 1) {
-      elements.push(<img src={src} alt="stars"></img>);
+      elements.push(<img src={src} className={"star--full"} alt="stars"></img>);
     }
     return elements;
   }
@@ -48,43 +48,47 @@ class Accordian extends Component {
   render() {
     // let { loaded, vendors } = this.state;
     return (
-      <div className="container">
+      <div className="container accord-tub">
         <Accordion defaultActiveKey="0">
           {multiple.map((vendor, index) => (
             <Card key={vendor.id}>
-              <Card.Header className={`accord-${this.styleTab(index)}`}>
+              <Card.Header
+                className={`accord-head accord-${this.styleTab(index)}`}
+              >
                 <Accordion.Toggle
                   as={Button}
                   variant="link"
                   eventKey={vendor.id}
                 >
-                  <div className="accord-title">{vendor.name}</div>
+                  <h2 className="accord-title">{vendor.name}</h2>
+                  <div class={"accord-waffle-texture"}></div>
                 </Accordion.Toggle>
               </Card.Header>
               <Accordion.Collapse eventKey={vendor.id}>
-                <Card.Body>
-                  <div className="row float-right">
-                    <div className="col">
-                      {this.repeatElements(
-                        vendor.rating,
-                        require("../assets/star-full.png")
-                      )}
+                <Card.Body className={`accord accord-${this.styleBody(index)}`}>
+                  <div className={`acord-body`}>
+                    <div className={"accord-row-1"}>
+                      <img
+                        className={`van-img-${this.styleProfile(index)}`}
+                        src={require("../assets/van01.png")}
+                        alt="An ice cream man"
+                      />
+                      <div className="star-container">
+                        {this.repeatElements(
+                          vendor.rating,
+                          require("../assets/star-full.png")
+                        )}
+                      </div>
+                      <div class="w-100"></div>
+                      <div className="col">
+                        {this.repeatElements(
+                          vendor.priciness,
+                          require("../assets/pound-02.png")
+                        )}
+                      </div>
                     </div>
-                    <div class="w-100"></div>
-                    <div className="col">
-                      {this.repeatElements(
-                        vendor.priciness,
-                        require("../assets/star-empty.png")
-                      )}
-                    </div>
+                    <p className={"accord-bio"}>{vendor.bio}</p>
                   </div>
-                  <img
-                    className="rounded-circle"
-                    src={require("../assets/van01.png")}
-                    alt="An ice cream man"
-                  ></img>
-                  <h5>Bio</h5>
-                  <p>{vendor.bio}</p>
                 </Card.Body>
               </Accordion.Collapse>
             </Card>
