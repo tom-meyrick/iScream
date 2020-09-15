@@ -4,6 +4,7 @@ import Heading from "./Components/Heading";
 import LeafletMap from "./Components/LeafletMap";
 import Accordian from "./Components/Accordian";
 import SideBar from "./Components/SideBar";
+import SignupForm from "./Components/SignupForm";
 
 const App = () => (
   <>
@@ -18,6 +19,8 @@ const App = () => (
       <SideBar />
       <h5>Map</h5>
       <LeafletMap />
+      <h5>Form</h5>
+      <SignupForm />
     </div>
   </>
 );
