@@ -59,6 +59,7 @@ class Accordian extends Component {
                   as={Button}
                   variant="link"
                   eventKey={vendor.id}
+                  id={vendor.id}
                   className={"accord-title"}
                 >
                   {vendor.name}

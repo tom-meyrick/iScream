@@ -54,7 +54,14 @@ class LeafletMap extends Component {
               position={[longitude, latitude]}
               icon={this.marker}
             >
-              <Popup></Popup>
+              <Popup>
+                <p>Name: {vendor.name}</p>
+                <p>Rating: {vendor.rating}/5</p>
+                <a onClick={console.log} href={"#" + vendor.id}>
+                  Click here
+                </a>
+              </Popup>
+
             </Marker>
           );
         })}
