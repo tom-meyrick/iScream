@@ -3,8 +3,8 @@
     "id": 1,
     "name": "Mr. Nice Cream",
     "location": {
-      "longitude": 51.454693,
-      "latitude": -2.607366
+      "latitude": 51.454693,
+      "longitude": -2.607366
     },
     "priciness": 1,
     "rating": 5,
@@ -15,8 +15,8 @@
     "id": 2,
     "name": "Whippee Doo!",
     "location": {
-      "longitude": 51.446758,
-      "latitude": -2.631703
+      "latitude": 51.446758,
+      "longitude": -2.631703
     },
     "priciness": 1,
     "rating": 2,
@@ -27,8 +27,8 @@
     "id": 3,
     "name": "Free Candy",
     "location": {
-      "longitude": 51.455899,
-      "latitude": -2.586947
+      "latitude": 51.455899,
+      "longitude": -2.586947
     },
     "priciness": 1,
     "rating": 3,
@@ -39,8 +39,8 @@
     "id": 4,
     "name": "Banana Split",
     "location": {
-      "longitude": 51.438101,
-      "latitude": -2.585755
+      "latitude": 51.438101,
+      "longitude": -2.585755
     },
     "priciness": 1,
     "rating": 4,
