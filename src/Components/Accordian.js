@@ -82,8 +82,8 @@ class Accordian extends Component {
                           "stars"
                         )}
                       </div>
-                      <div class="w-100"></div>
-                      <div className="col">
+
+                      <div className="">
                         {this.repeatElements(
                           vendor.priciness,
                           require("../assets/pound-02.png"),

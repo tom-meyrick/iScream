@@ -46,7 +46,7 @@
   }
 
   &-title {
-    background-color: rgba(255, 218, 185, 0.5);
+    background-color: $opaque;
     border-radius: $b-radius;
     padding: 0.5rem;
     // font-family: $font-head;
@@ -63,15 +63,30 @@
   }
 
   &-row-1 {
+    background-color: $opaque;
+    padding: 1rem;
+    border-radius: $b-radius;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
 
   &-bio {
+    border-radius: $b-radius;
     background-color: rgba(255, 240, 255, 0.3);
-    margin: auto;
-    max-width: 75%;
+    margin: 2rem auto;
+    max-width: 85%;
     padding: 2rem;
+  }
+}
+
+@media (max-width: $breakpoint-handheld) {
+  .accord {
+    &-row-1 {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
