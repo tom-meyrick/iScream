@@ -5,6 +5,7 @@ import L from "leaflet";
 import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 import vanMarker from "../../assets/marker01.png";
 import usrMarker from "../../assets/marker03.png";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 class LeafletMap extends Component {
   constructor(props) {
@@ -57,7 +58,6 @@ class LeafletMap extends Component {
 
   render() {
     const { handleClick } = this.props;
-    const { vendorID } = this.state;
 
     const view = {
       lat: 51.454711,
@@ -94,12 +94,12 @@ class LeafletMap extends Component {
               <Popup key={vendor.id}>
                 <p>Name: {vendor.name}</p>
                 <p>Rating: {vendor.rating}/5</p>
-                <a
+                <AnchorLink
                   onClick={() => handleClick(vendor.id)}
                   href={"#" + vendor.id}
                 >
                   Click here
-                </a>
+                </AnchorLink>
               </Popup>
             </Marker>
           );
