@@ -27,22 +27,22 @@
   }
 
   &-blue {
-    background-color: var(--accord-blue);
+    background-color: $blue;
   }
   &-pink {
-    background-color: var(--accord-pink);
+    background-color: $pink;
   }
   &-vanilla {
-    background-color: var(--accord-vanilla);
+    background-color: $vanilla;
   }
   &-caramel {
-    background-color: var(--accord-caramel);
+    background-color: $caramel;
   }
   &-chocolate {
-    background-color: var(--accord-chocolate);
+    background-color: $chocolate;
   }
   &-lime {
-    background-color: var(--accord-lime);
+    background-color: $lime;
   }
 
   &-title {
@@ -76,8 +76,8 @@
     border-radius: $b-radius;
     background-color: rgba(255, 240, 255, 0.3);
     margin: 1rem auto;
-    max-width: 85%;
-    padding: 1.5rem;
+    max-width: 95%;
+    padding: 1rem;
   }
 }
 

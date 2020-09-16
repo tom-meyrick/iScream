@@ -10,22 +10,22 @@ $border-width: 7px;
   }
   &-blue {
     @extend .van-img;
-    border: $border-width solid var(--accord-blue);
+    border: $border-width solid $blue;
   }
   &-pink {
     @extend .van-img;
-    border: $border-width solid var(--accord-pink);
+    border: $border-width solid $pink;
   }
   &-vanilla {
     @extend .van-img;
-    border: 0.6rem solid var(--accord-vanilla);
+    border: 0.6rem solid $vanilla;
   }
   &-caramel {
     @extend .van-img;
-    border: $border-width solid var(--accord-caramel);
+    border: $border-width solid $caramel;
   }
   &-chocolate {
     @extend .van-img;
-    border: $border-width solid var(--accord-chocolate);
+    border: $border-width solid $chocolate;
   }
 }

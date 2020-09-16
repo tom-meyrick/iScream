@@ -1,13 +1,11 @@
-:root {
-  --accord-pink: #fcbdd3;
-  --accord-blue: #bfefcd;
-  --accord-vanilla: #f7ecad;
-  --accord-caramel: #f3c078;
-  --accord-chocolate: #9d6140;
-  --accord-lime: #d8ffa2;
-}
+$pink: #fcbdd3;
+$blue: #bfefcd;
+$vanilla: #f7ecad;
+$caramel: #f3c078;
+$chocolate: #9d6140;
+$lime: #d8ffa2;
 
-$opaque: rgba(255, 218, 185, 0.5);
+$opaque: rgba(255, 240, 255, 0.3);
 
 $breakpoint-small: 275px;
 $breakpoint-handheld: 350px;

@@ -5,8 +5,9 @@ import Button from "react-bootstrap/Button";
 import multiple from "../../multiple.json";
 import axios from "../../axiosConfig";
 import Repeater from "../Repeater";
-// import Profile from "./Profile";
-//Test
+import Tags from "../Tags";
+import Profile from "../Profile";
+
 class Accordian extends Component {
   styleTab = (i) => {
     const styles = ["pink", "caramel", "chocolate", "blue", "lime"];
@@ -45,11 +46,12 @@ class Accordian extends Component {
                 <Card.Body className={`accord accord-${this.styleBody(index)}`}>
                   <div className={`acord-body`}>
                     <div className={"accord-row-1"}>
-                      <img
-                        className={`van-img-${this.styleProfile(index)}`}
-                        src={vendor.imgUrl}
+                      <Profile
+                        url={vendor.imgUrl}
+                        color={this.styleProfile(index)}
                         alt="An ice cream man"
                       />
+
                       <div className="star-container">
                         <Repeater
                           value={vendor.rating}
@@ -69,6 +71,7 @@ class Accordian extends Component {
                       </div>
                     </div>
                     <p className={"accord-bio"}>{vendor.bio}</p>
+                    <Tags tags={["ice", "cream", "lollies", "flakes"]} />
                   </div>
                 </Card.Body>
               </Accordion.Collapse>
