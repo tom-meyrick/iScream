@@ -95,8 +95,10 @@ class LeafletMap extends Component {
                 <p>Name: {vendor.name}</p>
                 <p>Rating: {vendor.rating}/5</p>
                 <AnchorLink
-                  onClick={() => handleClick(vendor.id)}
+                  offset={() => 400}
                   href={"#" + vendor.id}
+                  onClick={() => handleClick(vendor.id)}
+                  // href={"#" + vendor.id}
                 >
                   Click here
                 </AnchorLink>
