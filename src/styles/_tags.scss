@@ -1,0 +1,64 @@
+.tags__container {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: $opaque;
+  border-radius: $b-radius;
+
+  .tag {
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .tags__container {
+    flex-direction: column;
+    .tag {
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+.tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.5rem;
+  min-width: 10vw;
+  border: $vanilla 1px solid;
+  border-radius: $b-radius;
+
+  &:hover {
+    border: #333 1px solid;
+  }
+
+  &-blue {
+    @extend .tag;
+    background-color: $blue;
+  }
+
+  &-pink {
+    @extend .tag;
+
+    background-color: $pink;
+  }
+  &-caramel {
+    @extend .tag;
+    background-color: $caramel;
+  }
+
+  &-chocolate {
+    color: #eee;
+    @extend .tag;
+    background-color: $chocolate;
+  }
+
+  &-vanilla {
+    @extend .tag;
+    background-color: $vanilla;
+  }
+
+  &-lime {
+    @extend .tag;
+    background-color: $pink;
+  }
+}
