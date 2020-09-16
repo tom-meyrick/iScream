@@ -7,23 +7,6 @@ import axios from "../axiosConfig";
 // import Profile from "./Profile";
 
 class Accordian extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      loaded: false,
-      vendors: [],
-    };
-  }
-
-  componentDidMount() {
-    axios.get(`/vendors`).then(({ data }) => {
-      this.setState({
-        loaded: true,
-        vendors: data.data,
-      });
-    });
-  }
-
   repeatElements(value, src, description, alt) {
     const elements = [];
     for (let i = 0; i < value; i += 1) {
