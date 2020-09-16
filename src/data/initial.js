@@ -1,5 +1,5 @@
 const initial = {
-  vendorID: "",
+  vendorID: 0,
   location: "",
   loaded: false,
   vendors: [],
