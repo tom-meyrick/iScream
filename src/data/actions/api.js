@@ -13,3 +13,19 @@ export const handleGet = () => {
     );
   };
 };
+
+export const getLocale = () => {
+  debugger;
+  return (dispatch) => {
+    if ("geolocation" in navigator) {
+      const geoLocation = navigator.geolocation;
+      geoLocation.getCurrentPosition((position) => {
+        dispatch({
+          type: "LOCALE",
+          lat: position.coords.latitude,
+          lon: position.coords.longitude,
+        });
+      });
+    }
+  };
+};
