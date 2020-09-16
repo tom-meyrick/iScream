@@ -23,6 +23,8 @@ class Accordian extends Component {
   };
 
   render() {
+    const { handleClick } = this.props;
+
     return (
       <div className={this.props.className}>
         <Accordion activeKey={this.props.vendorID}>
@@ -37,6 +39,7 @@ class Accordian extends Component {
                   eventKey={vendor.id}
                   id={vendor.id}
                   className={"accord-title"}
+                  onClick={() => handleClick(vendor.id)}
                 >
                   {vendor.name}
                   <div className={"accord-waffle-texture"}></div>
