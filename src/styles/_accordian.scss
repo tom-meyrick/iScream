@@ -83,7 +83,7 @@
   }
 
   &__distance {
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #555;
     text-shadow: none;
     background-color: $opaque;
@@ -92,7 +92,7 @@
   }
 }
 
-@media (max-width: $breakpoint-handheld) {
+@media (max-width: $breakpoint-tablet) {
   .accord {
     &-row-1 {
       flex-direction: column;
@@ -106,7 +106,7 @@
     }
     &__distance {
       margin-top: 1rem;
-      font-size: 0.7rem;
+      font-size: 1rem;
     }
   }
 }
