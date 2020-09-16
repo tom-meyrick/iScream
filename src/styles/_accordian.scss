@@ -5,7 +5,9 @@
 
 .accord {
   &-head {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
     z-index: 1;
   }
@@ -78,6 +80,15 @@
     margin: 1rem auto;
     max-width: 95%;
     padding: 1rem;
+  }
+
+  &__distance {
+    font-size: 1rem;
+    color: #555;
+    text-shadow: none;
+    background-color: $opaque;
+    padding: 0.5rem;
+    border-radius: $b-radius;
   }
 }
 
