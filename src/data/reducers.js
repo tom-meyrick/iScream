@@ -19,6 +19,7 @@ const toggleID = (state, action) => ({
 const setLocation = (state, { lat, lon }) => ({
   ...state,
   userPos: {
+    loaded: true,
     lat: lat,
     lon: lon,
   },
