@@ -4,7 +4,8 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import multiple from "../multiple.json";
 import axios from "../axiosConfig";
-// import Profile from "./Profile";
+import Tags from "./Tags";
+import Profile from "./Profile";
 
 class Accordian extends Component {
   constructor(props) {
@@ -48,7 +49,6 @@ class Accordian extends Component {
   };
 
   render() {
-    // let { loaded, vendors } = this.state;
     return (
       <div className={this.props.className}>
         <Accordion defaultActiveKey="0">
@@ -72,11 +72,12 @@ class Accordian extends Component {
                 <Card.Body className={`accord accord-${this.styleBody(index)}`}>
                   <div className={`acord-body`}>
                     <div className={"accord-row-1"}>
-                      <img
-                        className={`van-img-${this.styleProfile(index)}`}
-                        src={vendor.imgUrl}
+                      <Profile
+                        url={vendor.imgUrl}
+                        color={this.styleProfile(index)}
                         alt="An ice cream man"
                       />
+
                       <div className="star-container">
                         {this.repeatElements(
                           vendor.rating,
@@ -86,7 +87,7 @@ class Accordian extends Component {
                         )}
                       </div>
 
-                      <div className="">
+                      <div className="pound__container">
                         {this.repeatElements(
                           vendor.priciness,
                           require("../assets/pound-02.png"),
@@ -96,6 +97,7 @@ class Accordian extends Component {
                       </div>
                     </div>
                     <p className={"accord-bio"}>{vendor.bio}</p>
+                    <Tags tags={["ice", "cream", "lollies", "flakes"]} />
                   </div>
                 </Card.Body>
               </Accordion.Collapse>
