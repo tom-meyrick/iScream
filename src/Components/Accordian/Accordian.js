@@ -28,49 +28,51 @@ const Accordian = ({ userPos, vendorID, vendor, handleClick, className }) => {
       <Accordion activeKey={vendorID}>
         {multiple.map((vendor, index) => (
           <Card key={vendor.id}>
-            <Card.Header className={`accord-head accord-${styleTab(index)}`}>
+            <Card.Header className={`accord__header bg__${styleTab(index)}`}>
               <Accordion.Toggle
                 as={Button}
                 variant="link"
                 eventKey={vendor.id}
                 id={vendor.id}
-                className={"accord-title"}
+                className={"accord__title"}
                 onClick={() => handleClick(vendor.id)}
               >
                 {vendor.name}
-                <div className={"accord-waffle-texture"}></div>
+                <div className={"bg__waffle"}></div>
               </Accordion.Toggle>
               <Distance userPos={userPos} vendorPos={vendor.location} />
             </Card.Header>
             <Accordion.Collapse eventKey={vendor.id}>
-              <Card.Body className={`accord accord-${styleBody(index)}`}>
-                <div className={`acord-body`}>
-                  <div className={"accord-row-1"}>
+              <Card.Body className={`accord bg__${styleBody(index)}`}>
+                <div className={`acord__body`}>
+                  <section className={"accord__section-data"}>
                     <Profile
                       url={vendor.imgUrl}
                       color={styleProfile(index)}
                       alt="An ice cream man"
                     />
 
-                    <div className="star-container">
+                    <div className="icon__star-container">
                       <Repeater
                         value={vendor.rating}
                         src={require("../../assets/star-full.png")}
-                        description={"star--full"}
+                        className={"icon__star"}
                         alt={"stars"}
                       />
                     </div>
 
-                    <div className="">
+                    <div className="icon__pound-container">
                       <Repeater
                         value={vendor.priciness}
                         src={require("../../assets/pound-02.png")}
-                        description={"pound"}
+                        className={"icon__pound"}
                         alt={"pound-coin"}
                       />
                     </div>
-                  </div>
-                  <p className={"accord-bio"}>{vendor.bio}</p>
+                  </section>
+                  <section className={"accord__section-bio"}>
+                    <p>{vendor.bio}</p>
+                  </section>
                   <Tags tags={["ice", "cream", "lollies", "flakes"]} />
                 </div>
               </Card.Body>
