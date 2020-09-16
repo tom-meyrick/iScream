@@ -4,3 +4,10 @@ export const updateID = (id) => {
     id,
   };
 };
+
+export const loaded = (vendors) => {
+  return {
+    type: "LOADED",
+    vendors,
+  };
+};
