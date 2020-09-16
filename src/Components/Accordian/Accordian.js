@@ -1,5 +1,6 @@
 import React from "react";
 import Accordion from "react-bootstrap/Accordion";
+import Distance from "./Distance";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import multiple from "../../multiple.json";
@@ -39,6 +40,7 @@ const Accordian = ({ userPos, vendorID, vendor, handleClick, className }) => {
                 {vendor.name}
                 <div className={"accord-waffle-texture"}></div>
               </Accordion.Toggle>
+              <Distance userPos={userPos} vendorPos={vendor.location} />
             </Card.Header>
             <Accordion.Collapse eventKey={vendor.id}>
               <Card.Body className={`accord accord-${styleBody(index)}`}>
