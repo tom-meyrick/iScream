@@ -8,23 +8,6 @@ import Tags from "./Tags";
 import Profile from "./Profile";
 
 class Accordian extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      loaded: false,
-      vendors: [],
-    };
-  }
-
-  componentDidMount() {
-    axios.get(`/vendors`).then(({ data }) => {
-      this.setState({
-        loaded: true,
-        vendors: data.data,
-      });
-    });
-  }
-
   repeatElements(value, src, description, alt) {
     const elements = [];
     for (let i = 0; i < value; i += 1) {
@@ -81,7 +64,7 @@ class Accordian extends Component {
                       <div className="star-container">
                         {this.repeatElements(
                           vendor.rating,
-                          require("../assets/star-full.png"),
+                          require("../../assets/star-full.png"),
                           "star--full",
                           "stars"
                         )}
@@ -90,7 +73,7 @@ class Accordian extends Component {
                       <div className="pound__container">
                         {this.repeatElements(
                           vendor.priciness,
-                          require("../assets/pound-02.png"),
+                          require("../../assets/pound-02.png"),
                           "pound",
                           "pound coin"
                         )}
