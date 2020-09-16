@@ -1,45 +1,39 @@
-.pound {
-  max-width: 56px;
-  max-height: 56px;
+.icon {
+  &__star-container {
+    display: flex;
+    justify-items: center;
+    flex-direction: row;
+    align-self: center;
+    margin: auto;
+  }
+  &__star {
+    max-width: 56px;
+    max-height: 56px;
+  }
+  &__star-empty {
+    max-width: 50px;
+    max-height: 50px;
+  }
+
+  &__pound-container {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  &__pound {
+    max-width: 56px;
+    max-height: 56px;
+  }
 }
 
-// .pound--active {
-//   font-family: Arial, Helvetica, sans-serif;
-//   display: flex;
-//   height: 40px;
-//   width: 40px;
-//   align-items: center;
-//   justify-content: center;
-//   border-radius: 100%;
-//   border: var(--accord-vanilla) 2px solid;
-//   background-color: rgba(247, 236, 173, 0.8);
-//   font-size: 2rem;
-//   font-style: italic;
-//   font-weight: bold;
-//   color: var(--accord-pink);
-//   padding: 0.2rem;
-// }
-
-.star-container {
-  display: flex;
-  justify-items: center;
-  flex-direction: row;
-  align-self: center;
-  margin: auto;
-}
-.star--full {
-  max-width: 56px;
-  max-height: 56px;
-}
-
-.star--empty {
-  max-width: 50px;
-  max-height: 50px;
-}
-
-@media (max-width: $breakpoint-tablet) {
-  .star--full {
-    max-width: 36px;
-    max-height: 36px;
+@media (max-width: $breakpoint-handheld) {
+  .icon {
+    &__star {
+      max-width: 36px;
+      max-height: 36px;
+    }
+    &__pound-container {
+      flex-direction: row;
+    }
   }
 } ;

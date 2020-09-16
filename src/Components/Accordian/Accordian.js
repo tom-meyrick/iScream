@@ -52,20 +52,20 @@ const Accordian = ({ userPos, vendorID, vendor, handleClick, className }) => {
                       alt="An ice cream man"
                     />
 
-                    <div className="star-container">
+                    <div className="icon__star-container">
                       <Repeater
                         value={vendor.rating}
                         src={require("../../assets/star-full.png")}
-                        description={"star--full"}
+                        className={"icon__star"}
                         alt={"stars"}
                       />
                     </div>
 
-                    <div className="">
+                    <div className="icon__pound-container">
                       <Repeater
                         value={vendor.priciness}
                         src={require("../../assets/pound-02.png")}
-                        description={"pound"}
+                        className={"icon__pound"}
                         alt={"pound-coin"}
                       />
                     </div>
