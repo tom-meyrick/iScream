@@ -11,3 +11,10 @@ export const loaded = (vendors) => {
     vendors,
   };
 };
+
+export const handleToggleID = (vendorID) => {
+  return {
+    type: "TOGGLEID",
+    vendorID,
+  };
+};

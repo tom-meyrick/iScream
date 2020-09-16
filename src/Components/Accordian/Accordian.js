@@ -2,22 +2,13 @@ import React, { Component } from "react";
 import Accordion from "react-bootstrap/Accordion";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-import multiple from "../multiple.json";
-import axios from "../axiosConfig";
-import Tags from "./Tags";
-import Profile from "./Profile";
+import multiple from "../../multiple.json";
+import axios from "../../axiosConfig";
+import Repeater from "../Repeater";
+import Tags from "../Tags";
+import Profile from "../Profile";
 
 class Accordian extends Component {
-  repeatElements(value, src, description, alt) {
-    const elements = [];
-    for (let i = 0; i < value; i += 1) {
-      elements.push(
-        <img src={src} className={description} alt={alt} key={i}></img>
-      );
-    }
-    return elements;
-  }
-
   styleTab = (i) => {
     const styles = ["pink", "caramel", "chocolate", "blue", "lime"];
     return styles[i % styles.length];
@@ -34,7 +25,7 @@ class Accordian extends Component {
   render() {
     return (
       <div className={this.props.className}>
-        <Accordion defaultActiveKey="0">
+        <Accordion defaultActiveKey={`${this.vendorID}`}>
           {multiple.map((vendor, index) => (
             <Card key={vendor.id}>
               <Card.Header
@@ -62,21 +53,21 @@ class Accordian extends Component {
                       />
 
                       <div className="star-container">
-                        {this.repeatElements(
-                          vendor.rating,
-                          require("../../assets/star-full.png"),
-                          "star--full",
-                          "stars"
-                        )}
+                        <Repeater
+                          value={vendor.rating}
+                          src={require("../../assets/star-full.png")}
+                          description={"star--full"}
+                          alt={"stars"}
+                        />
                       </div>
 
-                      <div className="pound__container">
-                        {this.repeatElements(
-                          vendor.priciness,
-                          require("../../assets/pound-02.png"),
-                          "pound",
-                          "pound coin"
-                        )}
+                      <div className="">
+                        <Repeater
+                          value={vendor.priciness}
+                          src={require("../../assets/pound-02.png")}
+                          description={"pound"}
+                          alt={"pound-coin"}
+                        />
                       </div>
                     </div>
                     <p className={"accord-bio"}>{vendor.bio}</p>

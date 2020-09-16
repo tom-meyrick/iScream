@@ -56,6 +56,9 @@ class LeafletMap extends Component {
   });
 
   render() {
+    const { handleClick } = this.props;
+    const { vendorID } = this.state;
+
     const view = {
       lat: 51.454711,
       lon: -2.587923,
@@ -91,7 +94,10 @@ class LeafletMap extends Component {
               <Popup key={vendor.id}>
                 <p>Name: {vendor.name}</p>
                 <p>Rating: {vendor.rating}/5</p>
-                <a onClick={console.log} href={"#" + vendor.id}>
+                <a
+                  onClick={() => handleClick(vendor.id)}
+                  href={"#" + vendor.id}
+                >
                   Click here
                 </a>
               </Popup>
