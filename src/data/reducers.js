@@ -16,6 +16,14 @@ const toggleID = (state, action) => ({
   vendorID: action.vendorID,
 });
 
+const setLocation = (state, { lat, lon }) => ({
+  ...state,
+  userPos: {
+    lat: lat,
+    lon: lon,
+  },
+});
+
 const reducer = (state, action) => {
   switch (action.type) {
     case "LOADED":
@@ -24,6 +32,9 @@ const reducer = (state, action) => {
       return updateID(state, action);
     case "TOGGLEID":
       return toggleID(state, action);
+    case "LOCALE":
+      debugger;
+      return setLocation(state, action);
     default:
       return state;
   }
