@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import axios from "../axiosConfig";
-import multiple from "../multiple.json";
+import axios from "../../axiosConfig";
+import multiple from "../../multiple.json";
 import L from "leaflet";
 import { Map, TileLayer, Marker, Popup } from "react-leaflet";
-import vanMarker from "../assets/marker01.png";
-import usrMarker from "../assets/marker03.png";
+import vanMarker from "../../assets/marker01.png";
+import usrMarker from "../../assets/marker03.png";
 
 class LeafletMap extends Component {
   constructor(props) {
@@ -88,7 +88,7 @@ class LeafletMap extends Component {
               icon={this.vendorMarker}
               key={vendor.id}
             >
-              <Popup>
+              <Popup key={vendor.id}>
                 <p>Name: {vendor.name}</p>
                 <p>Rating: {vendor.rating}/5</p>
                 <a onClick={console.log} href={"#" + vendor.id}>
