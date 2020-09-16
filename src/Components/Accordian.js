@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import Accordion from "react-bootstrap/Accordion";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-import multiple from "../../multiple.json";
-import axios from "../../axiosConfig";
+import multiple from "../multiple.json";
+import axios from "../axiosConfig";
 // import Profile from "./Profile";
 
 class Accordian extends Component {
@@ -80,7 +80,7 @@ class Accordian extends Component {
                       <div className="star-container">
                         {this.repeatElements(
                           vendor.rating,
-                          require("../../assets/star-full.png"),
+                          require("../assets/star-full.png"),
                           "star--full",
                           "stars"
                         )}
@@ -89,7 +89,7 @@ class Accordian extends Component {
                       <div className="">
                         {this.repeatElements(
                           vendor.priciness,
-                          require("../../assets/pound-02.png"),
+                          require("../assets/pound-02.png"),
                           "pound",
                           "pound coin"
                         )}
