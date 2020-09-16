@@ -25,7 +25,7 @@ class Accordian extends Component {
   render() {
     return (
       <div className={this.props.className}>
-        <Accordion defaultActiveKey={`${this.vendorID}`}>
+        <Accordion activeKey={this.props.vendorID}>
           {multiple.map((vendor, index) => (
             <Card key={vendor.id}>
               <Card.Header
