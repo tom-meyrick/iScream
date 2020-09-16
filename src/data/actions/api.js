@@ -3,7 +3,7 @@ import { loaded } from "../../data/actions/state";
 
 export const handleGet = () => {
   return (dispatch) => {
-    axios.get("/vendors/").then(
+    axios.get("/vendors").then(
       ({ data }) => {
         dispatch(loaded(data.data));
       },
