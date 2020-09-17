@@ -23,12 +23,13 @@ const view = {
   zoom: 13,
 };
 
-export default function Component({
-  vendors,
-  handleMount,
-  userPos,
-  handleClick,
-}) {
+const styleProfile = (i) => {
+  const styles = ["caramel", "chocolate", "blue", "pink", "lime"];
+  return styles[i % styles.length];
+};
+
+export default function Component({ handleMount, userPos, handleClick }) {
+  console.log(userPos);
   //component did mount equivilent
   useEffect(() => {
     handleMount();
@@ -46,9 +47,8 @@ export default function Component({
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <Marker position={[userPos.lat, userPos.lon]} icon={userMarker}></Marker>
-      {vendors.map((vendor) => {
-        let latitude = +vendor.location[0];
-        let longitude = +vendor.location[1];
+      {multiple.map((vendor, i) => {
+        const { latitude, longitude } = vendor.location;
         return (
           <Marker
             position={[latitude, longitude]}
@@ -56,10 +56,11 @@ export default function Component({
             key={vendor.id}
           >
             <Popup key={vendor.id}>
-              <p>Name: {vendor.name}</p>
-              <p>Rating: {vendor.rating}/5</p>
               <a onClick={() => handleClick(vendor.id)} href={"#" + vendor.id}>
-                Click here
+                <img
+                  src={vendor.imgUrl}
+                  className={`map__popup-img-${styleProfile(i)}`}
+                />
               </a>
             </Popup>
           </Marker>

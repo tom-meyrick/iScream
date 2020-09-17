@@ -17,6 +17,7 @@ const styleBody = (i) => {
   const styles = ["blue", "lime", "pink", "lime", "chocolate"];
   return styles[i % styles.length];
 };
+
 const styleProfile = (i) => {
   const styles = ["caramel", "chocolate", "blue", "pink", "lime"];
   return styles[i % styles.length];
