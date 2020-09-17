@@ -15,7 +15,6 @@ export const handleGet = () => {
 };
 
 export const getLocale = () => {
-  debugger;
   return (dispatch) => {
     if ("geolocation" in navigator) {
       const geoLocation = navigator.geolocation;

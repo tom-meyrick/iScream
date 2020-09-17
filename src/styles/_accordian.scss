@@ -1,15 +1,23 @@
-.main {
-  display: flex;
-  flex-direction: column;
-}
-
-.accord {
-  &-head {
-    display: block;
-    position: relative;
-    z-index: 1;
+.bg {
+  &__blue {
+    background-color: $blue;
   }
-  &-waffle-texture {
+  &__pink {
+    background-color: $pink;
+  }
+  &__vanilla {
+    background-color: $vanilla;
+  }
+  &__caramel {
+    background-color: $caramel;
+  }
+  &__chocolate {
+    background-color: $chocolate;
+  }
+  &__lime {
+    background-color: $lime;
+  }
+  &__waffle {
     position: absolute;
     top: 0;
     left: 0;
@@ -19,33 +27,28 @@
     opacity: 0.1;
     z-index: -1;
   }
+}
+.main {
+  display: flex;
+  flex-direction: column;
+}
 
-  &-body {
+.accord {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__body {
     display: flex;
     flex-direction: column;
     z-index: 2;
   }
 
-  &-blue {
-    background-color: $blue;
-  }
-  &-pink {
-    background-color: $pink;
-  }
-  &-vanilla {
-    background-color: $vanilla;
-  }
-  &-caramel {
-    background-color: $caramel;
-  }
-  &-chocolate {
-    background-color: $chocolate;
-  }
-  &-lime {
-    background-color: $lime;
-  }
-
-  &-title {
+  &__title {
     background-color: $opaque;
     border-radius: $b-radius;
     padding: 0.5rem;
@@ -62,31 +65,49 @@
     }
   }
 
-  &-row-1 {
-    background-color: $opaque;
-    padding: 1rem;
-    border-radius: $b-radius;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  &__section {
+    &-data {
+      background-color: $opaque;
+      padding: 1rem;
+      border-radius: $b-radius;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-bio {
+      border-radius: $b-radius;
+      background-color: rgba(255, 240, 255, 0.3);
+      margin: 1rem auto;
+      max-width: 95%;
+      padding: 1rem;
+    }
   }
 
-  &-bio {
+  &__distance {
+    font-size: 0.8rem;
+    color: #555;
+    text-shadow: none;
+    background-color: $opaque;
+    padding: 0.5rem;
     border-radius: $b-radius;
-    background-color: rgba(255, 240, 255, 0.3);
-    margin: 1rem auto;
-    max-width: 95%;
-    padding: 1rem;
   }
 }
 
-@media (max-width: $breakpoint-handheld) {
+@media (max-width: $breakpoint-tablet) {
   .accord {
-    &-row-1 {
+    &__section-data {
       flex-direction: column;
       align-items: center;
       justify-content: center;
+    }
+    &__header {
+      flex-direction: column;
+    }
+
+    &__distance {
+      margin-top: 1rem;
+      font-size: 1rem;
     }
   }
 }

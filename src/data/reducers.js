@@ -19,6 +19,7 @@ const toggleID = (state, action) => ({
 const setLocation = (state, { lat, lon }) => ({
   ...state,
   userPos: {
+    loaded: true,
     lat: lat,
     lon: lon,
   },
@@ -33,7 +34,6 @@ const reducer = (state, action) => {
     case "TOGGLEID":
       return toggleID(state, action);
     case "LOCALE":
-      debugger;
       return setLocation(state, action);
     default:
       return state;
