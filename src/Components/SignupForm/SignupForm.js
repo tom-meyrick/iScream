@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import axios from "../axiosConfig";
+import axios from "../../axiosConfig";
 
 class SignupForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
       name: "",
-      longitude: "",
-      latitude: "",
+      lat: "",
+      lon: "",
       priciness: "",
       rating: "",
       imgUrl: "",
@@ -28,20 +28,12 @@ class SignupForm extends Component {
   }
   handleClick = (e) => {
     e.preventDefault();
-    let {
-      name,
-      latitude,
-      longitude,
-      priciness,
-      rating,
-      imgUrl,
-      bio,
-    } = this.state;
+    let { name, lat, lon, priciness, rating, imgUrl, bio } = this.state;
     axios
-      .post("/vendors/signup", {
+      .post("/vans/api", {
         name: name,
-        latitude: latitude,
-        longitude: longitude,
+        lat: lat,
+        lon: lon,
         priciness: priciness,
         rating: rating,
         imgUrl: imgUrl,
@@ -50,8 +42,8 @@ class SignupForm extends Component {
       .then(() => {
         this.setState({
           name: "",
-          latitude: "",
-          longitude: "",
+          lat: "",
+          lon: "",
           priciness: "",
           rating: "",
           imgUrl: "",
@@ -63,6 +55,20 @@ class SignupForm extends Component {
         console.log("Something has gone wrong", error.response);
       });
   };
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.handleSubmit({ ...this.state });
+    this.setState({
+      name: "",
+      lat: "",
+      lon: "",
+      priciness: "",
+      rating: "",
+      imgUrl: "",
+      bio: "",
+    });
+  }
 
   handleName(e) {
     this.setState({ name: e.currentTarget.value });
@@ -93,8 +99,8 @@ class SignupForm extends Component {
     let { handleClick } = this.props;
     let {
       name,
-      latitude,
-      longitude,
+      lat,
+      lon,
       priciness,
       rating,
       imgUrl,
@@ -115,22 +121,22 @@ class SignupForm extends Component {
         <Form.Group controlId="formLatitude">
           <Form.Label>Latitude</Form.Label>
           <Form.Control
-            type="float"
+            type="text"
             placeholder="51.4545"
             onChange={this.handleLat}
-            value={latitude}
+            value={lat}
           />
         </Form.Group>
         <Form.Group controlId="formLongitude">
           <Form.Label>Longitude</Form.Label>
           <Form.Control
-            type="float"
+            type="text"
             placeholder="2.5879"
             onChange={this.handleLong}
-            value={longitude}
+            value={lon}
           />
         </Form.Group>
-        <Form.Group controlId="formLongitude">
+        <Form.Group controlId="formPriciness">
           <Form.Label>Priciness</Form.Label>
           <Form.Control
             type="number"

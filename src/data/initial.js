@@ -8,6 +8,13 @@ const initial = {
     lat: 0.0,
     lon: 0.0,
   },
+  name: "",
+  lat: "",
+  lon: "",
+  priciness: 0,
+  rating: 0,
+  imgUrl: "",
+  bio: "",
 };
 
 export default initial;
