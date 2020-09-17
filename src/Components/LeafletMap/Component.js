@@ -23,7 +23,12 @@ const view = {
   zoom: 13,
 };
 
-export default function Component({ handleMount, userPos, handleClick }) {
+export default function Component({
+  vendors,
+  handleMount,
+  userPos,
+  handleClick,
+}) {
   console.log(userPos);
   //component did mount equivilent
   useEffect(() => {
@@ -42,8 +47,9 @@ export default function Component({ handleMount, userPos, handleClick }) {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <Marker position={[userPos.lat, userPos.lon]} icon={userMarker}></Marker>
-      {multiple.map((vendor) => {
-        const { latitude, longitude } = vendor.location;
+      {vendors.map((vendor) => {
+        let latitude = +vendor.location[0];
+        let longitude = +vendor.location[1];
         return (
           <Marker
             position={[latitude, longitude]}
