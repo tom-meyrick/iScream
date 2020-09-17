@@ -18,3 +18,16 @@ export const handleToggleID = (vendorID) => {
     vendorID,
   };
 };
+
+export const submit = ({ name, lat, lon, priciness, rating, imgUrl, bio }) => {
+  return {
+    type: "ADD_VENDOR",
+    name,
+    lat,
+    lon,
+    priciness,
+    rating,
+    imgUrl,
+    bio,
+  };
+};

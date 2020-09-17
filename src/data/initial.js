@@ -15,6 +15,7 @@ const initial = {
   rating: 0,
   imgUrl: "",
   bio: "",
+  submitted: false,
 };
 
 export default initial;

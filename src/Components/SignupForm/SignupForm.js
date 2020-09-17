@@ -25,6 +25,7 @@ class SignupForm extends Component {
     this.handleImg = this.handleImg.bind(this);
     this.handleBio = this.handleBio.bind(this);
     this.handleIceCream = this.handleIceCream.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleClick = (e) => {
     e.preventDefault();
@@ -96,7 +97,7 @@ class SignupForm extends Component {
   }
 
   render() {
-    let { handleClick } = this.props;
+    let { handleSubmit } = this.props;
     let {
       name,
       lat,
@@ -181,7 +182,11 @@ class SignupForm extends Component {
             value={iceCream}
           />
         </Form.Group>
-        <Button variant="primary" type="submit" onClick={(e) => handleClick(e)}>
+        <Button
+          variant="primary"
+          type="submit"
+          onClick={(e) => handleSubmit(e)}
+        >
           Submit
         </Button>
       </Form>
