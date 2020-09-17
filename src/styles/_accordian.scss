@@ -115,7 +115,7 @@
   }
 }
 
-@media (max-width: $breakpoint-tablet) {
+@media (max-width: 800px) {
   .accord {
     &__section-data {
       flex-direction: column;
