@@ -4,6 +4,47 @@
   border-radius: $b-radius;
 }
 
-.vendor-marker {
-  background-image: url("../assets/pound-02.png");
+.leaflet-container a.leaflet-popup-close-button {
+  width: auto;
+  height: auto;
+  color: #333;
+  background-color: #eee;
+  border: 1px solid #aaa;
+  padding: 0.2rem;
+  border-radius: 100%;
+}
+
+.leaflet-popup-content-wrapper {
+  background-color: rgba($color: #000000, $alpha: 0);
+  width: 125px;
+  height: 125px;
+  border-radius: 100%;
+  position: relative;
+  .map__popup-img {
+    @extend .leaflet-popup-content-wrapper;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &-blue {
+      @extend .map__popup-img;
+      border: $border-width solid $blue;
+    }
+    &-pink {
+      @extend .map__popup-img;
+      border: $border-width solid $pink;
+    }
+    &-vanilla {
+      @extend .map__popup-img;
+      border: 0.6rem solid $vanilla;
+    }
+    &-caramel {
+      @extend .map__popup-img;
+      border: $border-width solid $caramel;
+    }
+    &-chocolate {
+      @extend .map__popup-img;
+      border: $border-width solid $chocolate;
+    }
+  }
 }
