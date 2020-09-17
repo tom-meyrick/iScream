@@ -7,7 +7,9 @@ export default function PageWrap({ children }) {
       <div className={"main__side-panels"}></div>
       <div className={"main__container container"}>
         <Loaded>
-          <h1 className={"logo main__elem"}>iScream</h1>
+          <header className={"logo main__elem"}>
+            <h1 className="logo">iScream</h1>
+          </header>
           {children}
         </Loaded>
       </div>
