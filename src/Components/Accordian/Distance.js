@@ -35,11 +35,9 @@ export default function Distance({ userPos, vendorPos }) {
   const { longitude, latitude } = vendorPos;
   return userPos.loaded ? (
     <p className={"accord__distance"}>
-      {haversineDistance(
-        [userPos.lon, userPos.lat],
-        [longitude, latitude],
-        false
-      ).toFixed(2)}
+      {haversineDistance([userPos.lon, userPos.lat], vendorPos, false).toFixed(
+        2
+      )}
       {"km "}
     </p>
   ) : null;
