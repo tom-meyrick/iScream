@@ -22,18 +22,6 @@ const styleProfile = (i) => {
   return styles[i % styles.length];
 };
 
-<<<<<<< HEAD
-  render() {
-    const { handleClick, vendors } = this.props;
-
-    return (
-      <div className={this.props.className}>
-        <Accordion activeKey={this.props.vendorID}>
-          {vendors.map((vendor, index) => (
-            <Card key={vendor.id}>
-              <Card.Header
-                className={`accord-head accord-${this.styleTab(index)}`}
-=======
 const Accordian = ({ userPos, vendorID, vendor, handleClick, className }) => {
   return (
     <div className={className}>
@@ -48,7 +36,6 @@ const Accordian = ({ userPos, vendorID, vendor, handleClick, className }) => {
                 id={vendor.id}
                 className={"accord__title"}
                 onClick={() => handleClick(vendor.id)}
->>>>>>> master
               >
                 {vendor.name}
                 <div className={"bg__waffle"}></div>
