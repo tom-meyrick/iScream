@@ -22,11 +22,11 @@ const styleProfile = (i) => {
   return styles[i % styles.length];
 };
 
-const Accordian = ({ userPos, vendorID, vendor, handleClick, className }) => {
+const Accordian = ({ userPos, vendorID, handleClick, vendors, className }) => {
   return (
     <div className={className}>
       <Accordion activeKey={vendorID}>
-        {multiple.map((vendor, index) => (
+        {vendors.map((vendor, index) => (
           <Card key={vendor.id}>
             <Card.Header className={`accord__header bg__${styleTab(index)}`}>
               <Accordion.Toggle
