@@ -3,7 +3,7 @@ import { loaded } from "../../data/actions/state";
 
 export const handleGet = () => {
   return (dispatch) => {
-    axios.get("/vendors").then(
+    axios.get("api/vans").then(
       ({ data }) => {
         dispatch(loaded(data.data));
       },
@@ -15,7 +15,6 @@ export const handleGet = () => {
 };
 
 export const getLocale = () => {
-  debugger;
   return (dispatch) => {
     if ("geolocation" in navigator) {
       const geoLocation = navigator.geolocation;

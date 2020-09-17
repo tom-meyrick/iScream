@@ -33,7 +33,6 @@ const reducer = (state, action) => {
     case "TOGGLEID":
       return toggleID(state, action);
     case "LOCALE":
-      debugger;
       return setLocation(state, action);
     default:
       return state;

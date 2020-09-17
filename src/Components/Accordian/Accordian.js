@@ -23,12 +23,12 @@ class Accordian extends Component {
   };
 
   render() {
-    const { handleClick } = this.props;
+    const { handleClick, vendors } = this.props;
 
     return (
       <div className={this.props.className}>
         <Accordion activeKey={this.props.vendorID}>
-          {multiple.map((vendor, index) => (
+          {vendors.map((vendor, index) => (
             <Card key={vendor.id}>
               <Card.Header
                 className={`accord-head accord-${this.styleTab(index)}`}
