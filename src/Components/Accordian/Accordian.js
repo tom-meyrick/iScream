@@ -74,7 +74,7 @@ const Accordian = ({ userPos, vendorID, handleClick, vendors, className }) => {
                   <section className={"accord__section-bio"}>
                     <p>{vendor.bio}</p>
                   </section>
-                  <Tags tags={["ice", "cream", "lollies", "flakes"]} />
+                  <Tags tags={vendor.icecreams} />
                 </div>
               </Card.Body>
             </Accordion.Collapse>
