@@ -22,7 +22,9 @@ export const handlePost = ({
   rating,
   imgUrl,
   bio,
+  icecreams,
 }) => {
+  debugger;
   return (dispatch) => {
     axios
       .post("/api/vans", {
@@ -33,6 +35,7 @@ export const handlePost = ({
         rating: rating,
         imgUrl: imgUrl,
         bio: bio,
+        icecreams: icecreams.split(", "),
       })
       .then(
         ({ data }) => {
