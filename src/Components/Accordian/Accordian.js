@@ -69,7 +69,7 @@ const Accordian = ({ userPos, vendorID, handleClick, vendors, className }) => {
                       />
                     </div>
                   </section>
-                  <section className={"accord__section-bio"}>
+                  <section className={"accord__section-bio"} id={vendor.id}>
                     <p>{vendor.bio}</p>
                   </section>
                   <Tags tags={vendor.icecreams} />
