@@ -25,6 +25,22 @@ const setLocation = (state, { lat, lon }) => ({
   },
 });
 
+const submit = (state, action) => (
+  console.log(action.name),
+  {
+    ...state,
+    name: action.name,
+    lat: action.lat,
+    lon: action.lon,
+    priciness: action.priciness,
+    rating: action.rating,
+    imgUrl: action.imgUrl,
+    bio: action.bio,
+    icecreams: action.icecreams,
+    submitted: true,
+  }
+);
+
 const reducer = (state, action) => {
   switch (action.type) {
     case "LOADED":
@@ -35,6 +51,8 @@ const reducer = (state, action) => {
       return toggleID(state, action);
     case "LOCALE":
       return setLocation(state, action);
+    case "ADD_VENDOR":
+      return submit(state, action);
     default:
       return state;
   }

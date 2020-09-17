@@ -1,5 +1,5 @@
 import axios from "../../axiosConfig";
-import { loaded } from "../../data/actions/state";
+import { loaded, submit } from "../../data/actions/state";
 
 export const handleGet = () => {
   return (dispatch) => {
@@ -11,6 +11,37 @@ export const handleGet = () => {
         console.log(error);
       }
     );
+  };
+};
+
+export const handlePost = ({
+  name,
+  lat,
+  lon,
+  priciness,
+  rating,
+  imgUrl,
+  bio,
+}) => {
+  return (dispatch) => {
+    axios
+      .post("/api/vans", {
+        name: name,
+        lat: lat,
+        lon: lon,
+        priciness: priciness,
+        rating: rating,
+        imgUrl: imgUrl,
+        bio: bio,
+      })
+      .then(
+        ({ data }) => {
+          dispatch(submit(data.data));
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
   };
 };
 
