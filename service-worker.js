@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/iScream/precache-manifest.7f973fbb1b696924f7b8ba243787d212.js"
+  "/iScream/precache-manifest.e7d2f62c1ee846835f4bf57b9dae2a2b.js"
 );
 
 self.addEventListener('message', (event) => {
