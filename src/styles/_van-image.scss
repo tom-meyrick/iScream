@@ -28,4 +28,8 @@ $border-width: 7px;
     @extend .van-img;
     border: $border-width solid $chocolate;
   }
+  &-lime {
+    @extend .van-img;
+    border: $border-width solid $lime;
+  }
 }

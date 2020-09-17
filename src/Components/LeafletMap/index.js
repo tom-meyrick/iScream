@@ -15,6 +15,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     handleClick: (vendorID) => {
       dispatch(handleToggleID(vendorID));
+      document.getElementById(vendorID).scrollIntoView();
     },
     handleMount: () => {
       dispatch(getLocale());
