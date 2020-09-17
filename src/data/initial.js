@@ -15,6 +15,7 @@ const initial = {
   rating: 0,
   imgUrl: "",
   bio: "",
+  icecreams: "",
   submitted: false,
 };
 

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import axios from "../../axiosConfig";
 
 class SignupForm extends Component {
   constructor(props) {
@@ -10,13 +9,13 @@ class SignupForm extends Component {
       name: "",
       lat: "",
       lon: "",
-      priciness: "",
-      rating: "",
+      priciness: 0,
+      rating: 0,
       imgUrl: "",
       bio: "",
+      icecreams: "",
     };
 
-    this.handleClick = this.handleClick.bind(this);
     this.handleName = this.handleName.bind(this);
     this.handleLat = this.handleLat.bind(this);
     this.handleLong = this.handleLong.bind(this);
@@ -27,35 +26,6 @@ class SignupForm extends Component {
     this.handleIceCream = this.handleIceCream.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  handleClick = (e) => {
-    e.preventDefault();
-    let { name, lat, lon, priciness, rating, imgUrl, bio } = this.state;
-    axios
-      .post("/vans/api", {
-        name: name,
-        lat: lat,
-        lon: lon,
-        priciness: priciness,
-        rating: rating,
-        imgUrl: imgUrl,
-        bio: bio,
-      })
-      .then(() => {
-        this.setState({
-          name: "",
-          lat: "",
-          lon: "",
-          priciness: "",
-          rating: "",
-          imgUrl: "",
-          bio: "",
-          iceCream: "",
-        });
-      })
-      .catch((error) => {
-        console.log("Something has gone wrong", error.response);
-      });
-  };
 
   handleSubmit(e) {
     e.preventDefault();
@@ -64,10 +34,11 @@ class SignupForm extends Component {
       name: "",
       lat: "",
       lon: "",
-      priciness: "",
-      rating: "",
+      priciness: 0,
+      rating: 0,
       imgUrl: "",
       bio: "",
+      icecreams: "",
     });
   }
 
@@ -75,10 +46,10 @@ class SignupForm extends Component {
     this.setState({ name: e.currentTarget.value });
   }
   handleLat(e) {
-    this.setState({ latitude: e.currentTarget.value });
+    this.setState({ lat: e.currentTarget.value });
   }
   handleLong(e) {
-    this.setState({ longitude: e.currentTarget.value });
+    this.setState({ lon: e.currentTarget.value });
   }
   handlePriciness(e) {
     this.setState({ priciness: e.currentTarget.value });
@@ -93,7 +64,7 @@ class SignupForm extends Component {
     this.setState({ bio: e.currentTarget.value });
   }
   handleIceCream(e) {
-    this.setState({ iceCream: e.currentTarget.value });
+    this.setState({ icecreams: e.currentTarget.value });
   }
 
   render() {
@@ -106,7 +77,7 @@ class SignupForm extends Component {
       rating,
       imgUrl,
       bio,
-      iceCream,
+      icecreams,
     } = this.state;
     return (
       <Form className={this.props.className}>
@@ -121,21 +92,11 @@ class SignupForm extends Component {
         </Form.Group>
         <Form.Group controlId="formLatitude">
           <Form.Label>Latitude</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="51.4545"
-            onChange={this.handleLat}
-            value={lat}
-          />
+          <Form.Control type="text" onChange={this.handleLat} value={lat} />
         </Form.Group>
         <Form.Group controlId="formLongitude">
           <Form.Label>Longitude</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="2.5879"
-            onChange={this.handleLong}
-            value={lon}
-          />
+          <Form.Control type="text" onChange={this.handleLong} value={lon} />
         </Form.Group>
         <Form.Group controlId="formPriciness">
           <Form.Label>Priciness</Form.Label>
@@ -179,14 +140,10 @@ class SignupForm extends Component {
             type="text"
             placeholder="Magnum, Zoom, Lemon sorbet..."
             onChange={this.handleIceCream}
-            value={iceCream}
+            value={icecreams}
           />
         </Form.Group>
-        <Button
-          variant="primary"
-          type="submit"
-          onClick={(e) => handleSubmit(e)}
-        >
+        <Button variant="primary" type="submit" onClick={handleSubmit}>
           Submit
         </Button>
       </Form>

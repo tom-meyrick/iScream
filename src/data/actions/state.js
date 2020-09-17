@@ -19,7 +19,16 @@ export const handleToggleID = (vendorID) => {
   };
 };
 
-export const submit = ({ name, lat, lon, priciness, rating, imgUrl, bio }) => {
+export const submit = ({
+  name,
+  lat,
+  lon,
+  priciness,
+  rating,
+  imgUrl,
+  bio,
+  icecreams,
+}) => {
   return {
     type: "ADD_VENDOR",
     name,
@@ -29,5 +38,6 @@ export const submit = ({ name, lat, lon, priciness, rating, imgUrl, bio }) => {
     rating,
     imgUrl,
     bio,
+    icecreams,
   };
 };

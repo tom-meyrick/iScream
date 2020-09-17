@@ -17,7 +17,7 @@ const App = () => (
           <Component className={"main__elem"} />
           <Accordian className={"main__elem"} />
         </Loaded>
-        {/* <SignupForm className={"main__elem"} /> */}
+        <SignupForm className={"main__elem"} />
       </div>
       <div className={"main__side-panels"}> </div>
     </div>

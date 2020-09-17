@@ -24,7 +24,7 @@ const mapStateToProps = ({
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    // handleSubmit: (data) => dispatch(handlePost(data)),
+    handleSubmit: (data) => dispatch(handlePost(data)),
   };
 };
 

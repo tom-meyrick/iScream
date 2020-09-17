@@ -25,7 +25,7 @@ export const handlePost = ({
 }) => {
   return (dispatch) => {
     axios
-      .post("/vans/api", {
+      .post("/api/vans", {
         name: name,
         lat: lat,
         lon: lon,
