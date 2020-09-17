@@ -1,0 +1,28 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $opaque;
+
+  &__text {
+    margin-top: 1rem;
+    border-radius: $b-radius;
+    font-style: italic;
+  }
+
+  &__cta {
+    @extend .logo;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: peachpuff;
+    font-size: 4rem;
+    padding: 1rem;
+    border: 10px solid $pink;
+
+    &:hover {
+      background-color: $pink;
+      border: 10px solid peachpuff;
+    }
+  }
+}
