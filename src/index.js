@@ -1,10 +1,10 @@
+import "leaflet/dist/leaflet.css";
 import store from "./data/store";
 import { Provider } from "react-redux";
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import "leaflet/dist/leaflet.css";
 
 ReactDOM.render(
   <Provider store={store}>

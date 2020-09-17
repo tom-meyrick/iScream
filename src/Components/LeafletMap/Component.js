@@ -23,6 +23,11 @@ const view = {
   zoom: 13,
 };
 
+const styleProfile = (i) => {
+  const styles = ["caramel", "chocolate", "blue", "pink", "lime"];
+  return styles[i % styles.length];
+};
+
 export default function Component({ handleMount, userPos, handleClick }) {
   console.log(userPos);
   //component did mount equivilent
@@ -42,7 +47,7 @@ export default function Component({ handleMount, userPos, handleClick }) {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <Marker position={[userPos.lat, userPos.lon]} icon={userMarker}></Marker>
-      {multiple.map((vendor) => {
+      {multiple.map((vendor, i) => {
         const { latitude, longitude } = vendor.location;
         return (
           <Marker
@@ -51,10 +56,11 @@ export default function Component({ handleMount, userPos, handleClick }) {
             key={vendor.id}
           >
             <Popup key={vendor.id}>
-              <p>Name: {vendor.name}</p>
-              <p>Rating: {vendor.rating}/5</p>
               <a onClick={() => handleClick(vendor.id)} href={"#" + vendor.id}>
-                Click here
+                <img
+                  src={vendor.imgUrl}
+                  className={`map__popup-img-${styleProfile(i)}`}
+                />
               </a>
             </Popup>
           </Marker>
