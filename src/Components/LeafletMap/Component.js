@@ -29,7 +29,6 @@ export default function Component({
   userPos,
   handleClick,
 }) {
-  console.log(userPos);
   //component did mount equivilent
   useEffect(() => {
     handleMount();
