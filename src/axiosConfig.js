@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "https://iscream/api/",
+  baseURL: "https://iscream.developme.space/",
   headers: {
     Accept: "application/json",
 
