@@ -29,6 +29,7 @@ class SignupForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    debugger;
     this.props.handleSubmit({ ...this.state });
     this.setState({
       name: "",
@@ -68,7 +69,6 @@ class SignupForm extends Component {
   }
 
   render() {
-    let { handleSubmit } = this.props;
     let {
       name,
       lat,
@@ -143,7 +143,7 @@ class SignupForm extends Component {
             value={icecreams}
           />
         </Form.Group>
-        <Button variant="primary" type="submit" onClick={handleSubmit}>
+        <Button variant="primary" type="submit" onClick={this.handleSubmit}>
           Submit
         </Button>
       </Form>

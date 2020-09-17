@@ -25,21 +25,18 @@ const setLocation = (state, { lat, lon }) => ({
   },
 });
 
-const submit = (state, action) => (
-  console.log(action.name),
-  {
-    ...state,
-    name: action.name,
-    lat: action.lat,
-    lon: action.lon,
-    priciness: action.priciness,
-    rating: action.rating,
-    imgUrl: action.imgUrl,
-    bio: action.bio,
-    icecreams: action.icecreams,
-    submitted: true,
-  }
-);
+const submit = (state, action) => ({
+  ...state,
+  name: action.name,
+  lat: action.lat,
+  lon: action.lon,
+  priciness: action.priciness,
+  rating: action.rating,
+  imgUrl: action.imgUrl,
+  bio: action.bio,
+  icecreams: action.icecreams,
+  submitted: true,
+});
 
 const reducer = (state, action) => {
   switch (action.type) {

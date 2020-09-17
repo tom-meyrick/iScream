@@ -28,8 +28,12 @@ const styleProfile = (i) => {
   return styles[i % styles.length];
 };
 
-export default function Component({ handleMount, userPos, handleClick }) {
-  console.log(userPos);
+export default function Component({
+  handleMount,
+  vendors,
+  userPos,
+  handleClick,
+}) {
   //component did mount equivilent
   useEffect(() => {
     handleMount();
@@ -47,11 +51,11 @@ export default function Component({ handleMount, userPos, handleClick }) {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <Marker position={[userPos.lat, userPos.lon]} icon={userMarker}></Marker>
-      {multiple.map((vendor, i) => {
+      {vendors.map((vendor, i) => {
         const { latitude, longitude } = vendor.location;
         return (
           <Marker
-            position={[latitude, longitude]}
+            position={vendor.location}
             icon={vendorMarker}
             key={vendor.id}
           >
