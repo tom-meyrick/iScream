@@ -46,5 +46,9 @@
       @extend .map__popup-img;
       border: $border-width solid $chocolate;
     }
+    &-lime {
+      @extend .map__popup-img;
+      border: $border-width solid $lime;
+    }
   }
 }
