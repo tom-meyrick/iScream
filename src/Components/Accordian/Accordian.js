@@ -1,5 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import Accordion from "react-bootstrap/Accordion";
+import Distance from "./Distance";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import multiple from "../../multiple.json";
@@ -8,20 +9,20 @@ import Repeater from "../Repeater";
 import Tags from "../Tags";
 import Profile from "../Profile";
 
-class Accordian extends Component {
-  styleTab = (i) => {
-    const styles = ["pink", "caramel", "chocolate", "blue", "lime"];
-    return styles[i % styles.length];
-  };
-  styleBody = (i) => {
-    const styles = ["blue", "lime", "pink", "lime", "chocolate"];
-    return styles[i % styles.length];
-  };
-  styleProfile = (i) => {
-    const styles = ["caramel", "chocolate", "blue", "pink", "lime"];
-    return styles[i % styles.length];
-  };
+const styleTab = (i) => {
+  const styles = ["pink", "caramel", "chocolate", "blue", "lime"];
+  return styles[i % styles.length];
+};
+const styleBody = (i) => {
+  const styles = ["blue", "lime", "pink", "lime", "chocolate"];
+  return styles[i % styles.length];
+};
+const styleProfile = (i) => {
+  const styles = ["caramel", "chocolate", "blue", "pink", "lime"];
+  return styles[i % styles.length];
+};
 
+<<<<<<< HEAD
   render() {
     const { handleClick, vendors } = this.props;
 
@@ -32,58 +33,68 @@ class Accordian extends Component {
             <Card key={vendor.id}>
               <Card.Header
                 className={`accord-head accord-${this.styleTab(index)}`}
+=======
+const Accordian = ({ userPos, vendorID, vendor, handleClick, className }) => {
+  return (
+    <div className={className}>
+      <Accordion activeKey={vendorID}>
+        {multiple.map((vendor, index) => (
+          <Card key={vendor.id}>
+            <Card.Header className={`accord__header bg__${styleTab(index)}`}>
+              <Accordion.Toggle
+                as={Button}
+                variant="link"
+                eventKey={vendor.id}
+                id={vendor.id}
+                className={"accord__title"}
+                onClick={() => handleClick(vendor.id)}
+>>>>>>> master
               >
-                <Accordion.Toggle
-                  as={Button}
-                  variant="link"
-                  eventKey={vendor.id}
-                  id={vendor.id}
-                  className={"accord-title"}
-                  onClick={() => handleClick(vendor.id)}
-                >
-                  {vendor.name}
-                  <div className={"accord-waffle-texture"}></div>
-                </Accordion.Toggle>
-              </Card.Header>
-              <Accordion.Collapse eventKey={vendor.id}>
-                <Card.Body className={`accord accord-${this.styleBody(index)}`}>
-                  <div className={`acord-body`}>
-                    <div className={"accord-row-1"}>
-                      <Profile
-                        url={vendor.imgUrl}
-                        color={this.styleProfile(index)}
-                        alt="An ice cream man"
+                {vendor.name}
+                <div className={"bg__waffle"}></div>
+              </Accordion.Toggle>
+              <Distance userPos={userPos} vendorPos={vendor.location} />
+            </Card.Header>
+            <Accordion.Collapse eventKey={vendor.id}>
+              <Card.Body className={`accord bg__${styleBody(index)}`}>
+                <div className={`acord__body`}>
+                  <section className={"accord__section-data"}>
+                    <Profile
+                      url={vendor.imgUrl}
+                      color={styleProfile(index)}
+                      alt="An ice cream man"
+                    />
+
+                    <div className="icon__star-container">
+                      <Repeater
+                        value={vendor.rating}
+                        src={require("../../assets/star-full.png")}
+                        className={"icon__star"}
+                        alt={"stars"}
                       />
-
-                      <div className="star-container">
-                        <Repeater
-                          value={vendor.rating}
-                          src={require("../../assets/star-full.png")}
-                          description={"star--full"}
-                          alt={"stars"}
-                        />
-                      </div>
-
-                      <div className="">
-                        <Repeater
-                          value={vendor.priciness}
-                          src={require("../../assets/pound-02.png")}
-                          description={"pound"}
-                          alt={"pound-coin"}
-                        />
-                      </div>
                     </div>
-                    <p className={"accord-bio"}>{vendor.bio}</p>
-                    <Tags tags={["ice", "cream", "lollies", "flakes"]} />
-                  </div>
-                </Card.Body>
-              </Accordion.Collapse>
-            </Card>
-          ))}
-        </Accordion>
-      </div>
-    );
-  }
-}
+
+                    <div className="icon__pound-container">
+                      <Repeater
+                        value={vendor.priciness}
+                        src={require("../../assets/pound-02.png")}
+                        className={"icon__pound"}
+                        alt={"pound-coin"}
+                      />
+                    </div>
+                  </section>
+                  <section className={"accord__section-bio"}>
+                    <p>{vendor.bio}</p>
+                  </section>
+                  <Tags tags={["ice", "cream", "lollies", "flakes"]} />
+                </div>
+              </Card.Body>
+            </Accordion.Collapse>
+          </Card>
+        ))}
+      </Accordion>
+    </div>
+  );
+};
 
 export default Accordian;
