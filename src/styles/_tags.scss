@@ -33,32 +33,32 @@
 
   &-blue {
     @extend .tag;
-    background-color: $blue;
+    background-color: $blue-tab;
   }
 
   &-pink {
     @extend .tag;
 
-    background-color: $pink;
+    background-color: $pink-tab;
   }
   &-caramel {
     @extend .tag;
-    background-color: $caramel;
+    background-color: $caramel-tab;
   }
 
   &-chocolate {
     color: #eee;
     @extend .tag;
-    background-color: $chocolate;
+    background-color: $chocolate-tab;
   }
 
   &-vanilla {
     @extend .tag;
-    background-color: $vanilla;
+    background-color: $vanilla-tab;
   }
 
   &-lime {
     @extend .tag;
-    background-color: $pink;
+    background-color: $pink-tab;
   }
 }

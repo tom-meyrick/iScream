@@ -1,4 +1,35 @@
-.bg {
+.header {
+  &__blue {
+    background-color: $blue-tab;
+  }
+  &__pink {
+    background-color: $pink-tab;
+  }
+  &__vanilla {
+    background-color: $vanilla-tab;
+  }
+  &__caramel {
+    background-color: $caramel-tab;
+  }
+  &__chocolate {
+    background-color: $chocolate-tab;
+  }
+  &__lime {
+    background-color: $lime-tab;
+  }
+  &__waffle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/waffle-texture.jpg");
+    opacity: 0.1;
+    z-index: -1;
+  }
+}
+
+.body {
   &__blue {
     background-color: $blue;
   }
@@ -16,16 +47,6 @@
   }
   &__lime {
     background-color: $lime;
-  }
-  &__waffle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("../assets/waffle-texture.jpg");
-    opacity: 0.1;
-    z-index: -1;
   }
 }
 .main {
