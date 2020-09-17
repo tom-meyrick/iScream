@@ -32,7 +32,6 @@ function haversineDistance(coords1, coords2, isMiles) {
 }
 
 export default function Distance({ userPos, vendorPos }) {
-  const { longitude, latitude } = vendorPos;
   return userPos.loaded ? (
     <p className={"accord__distance"}>
       {haversineDistance([userPos.lon, userPos.lat], vendorPos, false).toFixed(
