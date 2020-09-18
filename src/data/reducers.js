@@ -8,7 +8,13 @@ const updateID = (state, action) => ({
 const loaded = (state, action) => ({
   ...state,
   loaded: true,
+  submitted: false,
   vendors: action.vendors,
+});
+
+const formSubmit = (state) => ({
+  ...state,
+  submitted: false,
 });
 
 const toggleID = (state, action) => ({
@@ -50,6 +56,8 @@ const reducer = (state, action) => {
       return setLocation(state, action);
     case "ADD_VENDOR":
       return submit(state, action);
+    case "FORM_SUBMIT":
+      return formSubmit(state);
     default:
       return state;
   }

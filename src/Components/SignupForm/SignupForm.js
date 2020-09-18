@@ -29,7 +29,6 @@ class SignupForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger;
     this.props.handleSubmit({ ...this.state });
     this.setState({
       name: "",
