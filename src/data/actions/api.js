@@ -24,7 +24,6 @@ export const handlePost = ({
   bio,
   icecreams,
 }) => {
-  debugger;
   return (dispatch) => {
     axios
       .post("/api/vans", {

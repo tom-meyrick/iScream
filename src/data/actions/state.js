@@ -12,6 +12,12 @@ export const loaded = (vendors) => {
   };
 };
 
+export const formSubmit = () => {
+  return {
+    type: "FORM_SUBMIT",
+  };
+};
+
 export const handleToggleID = (vendorID) => {
   return {
     type: "TOGGLEID",
