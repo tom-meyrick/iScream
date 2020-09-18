@@ -14,7 +14,6 @@ class Loaded extends Component {
     ) : (
       <div class="loading-wrapper">
         <span class="loader"></span>
-
         <p>Loading...</p>
       </div>
     );
