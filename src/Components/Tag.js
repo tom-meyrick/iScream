@@ -1,7 +1,11 @@
 import React from "react";
 
-export default function Tag({ tag, i }) {
-  const colors = ["pink", "caramel", "chocolate", "blue", "lime"];
-  const select = i % colors.length;
+let count = 0;
+
+export default function Tag({ tag }) {
+  const colors = ["pink", "blue", "chocolate", "vanilla", "lime"];
+  console.log(count);
+  count += 1;
+  const select = count % colors.length;
   return <button className={`tag-${colors[select]}`}>{tag}</button>;
 }

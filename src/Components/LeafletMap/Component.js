@@ -5,6 +5,7 @@ import L from "leaflet";
 import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 import vanMarker from "../../assets/marker01.png";
 import usrMarker from "../../assets/marker03.png";
+import { Link } from "react-router-dom";
 
 const vendorMarker = L.icon({
   iconUrl: vanMarker,
@@ -28,8 +29,12 @@ const styleProfile = (i) => {
   return styles[i % styles.length];
 };
 
-export default function Component({ handleMount, userPos, handleClick }) {
-  console.log(userPos);
+export default function Component({
+  handleMount,
+  vendors,
+  userPos,
+  handleClick,
+}) {
   //component did mount equivilent
   useEffect(() => {
     handleMount();
@@ -40,28 +45,29 @@ export default function Component({ handleMount, userPos, handleClick }) {
       className={"map" + " " + "main__elem"}
       center={[view.lat, view.lon]}
       zoom={view.zoom}
-      minZoom={10}
     >
       <TileLayer
         attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <Marker position={[userPos.lat, userPos.lon]} icon={userMarker}></Marker>
-      {multiple.map((vendor, i) => {
-        const { latitude, longitude } = vendor.location;
+      {vendors.map((vendor, i) => {
         return (
           <Marker
-            position={[latitude, longitude]}
+            position={vendor.location}
             icon={vendorMarker}
             key={vendor.id}
           >
             <Popup key={vendor.id}>
-              <a onClick={() => handleClick(vendor.id)} href={"#" + vendor.id}>
+              <Link
+                onClick={() => handleClick(vendor.id)}
+                href={"#" + vendor.id}
+              >
                 <img
                   src={vendor.imgUrl}
                   className={`map__popup-img-${styleProfile(i)}`}
                 />
-              </a>
+              </Link>
             </Popup>
           </Marker>
         );

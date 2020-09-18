@@ -1,11 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Damion&display=swap");
 
-:root {
+html {
   font-family: "Quicksand", sans-serif;
-  font-size: 16px;
+  font-size: 12px;
 }
 
+@media (min-width: $breakpoint-tablet) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: $breakpoint-large) {
+  html {
+    font-size: 16px;
+  }
+}
 * {
   color: #333;
 }
@@ -16,7 +27,8 @@ $font-head: "Damion", cursive;
   font-family: $font-head;
   color: yellow;
   margin: auto;
-  text-shadow: 1px 1px 0px palevioletred;
+  // text-shadow: 1px 1px 0px palevioletred;
+  text-shadow: 3px 3px 1px palevioletred;
   background-color: peachpuff;
   border-radius: $b-radius;
   padding: 1rem;
@@ -25,7 +37,6 @@ $font-head: "Damion", cursive;
 
 @media (min-width: $breakpoint-small) and (max-width: $breakpoint-tablet) {
   .logo {
-    text-shadow: 3px 3px 1px palevioletred;
     padding: 1rem;
     font-size: 3rem;
   }
