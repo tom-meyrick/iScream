@@ -1,6 +1,6 @@
 import "./styles/main.scss";
 import React, { Fragment } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import LeafletMap from "./Components/LeafletMap";
 import Accordian from "./Components/Accordian";
 import SignupForm from "./Components/SignupForm";
