@@ -5,6 +5,7 @@ import L from "leaflet";
 import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 import vanMarker from "../../assets/marker01.png";
 import usrMarker from "../../assets/marker03.png";
+import { Link } from "react-router-dom";
 
 const vendorMarker = L.icon({
   iconUrl: vanMarker,
@@ -60,12 +61,15 @@ export default function Component({
             key={vendor.id}
           >
             <Popup key={vendor.id}>
-              <a onClick={() => handleClick(vendor.id)} href={"#" + vendor.id}>
+              <Link
+                onClick={() => handleClick(vendor.id)}
+                href={"#" + vendor.id}
+              >
                 <img
                   src={vendor.imgUrl}
                   className={`map__popup-img-${styleProfile(i)}`}
                 />
-              </a>
+              </Link>
             </Popup>
           </Marker>
         );
