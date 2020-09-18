@@ -34,6 +34,7 @@ const Accordian = ({ userPos, vendorID, handleClick, vendors, className }) => {
                 eventKey={vendor.id}
                 id={vendor.id}
                 className={"accord__title"}
+                data-toggle="collapse"
                 onClick={() => handleClick(vendor.id)}
               >
                 {vendor.name}
