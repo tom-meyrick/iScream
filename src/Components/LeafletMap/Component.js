@@ -45,7 +45,6 @@ export default function Component({
       className={"map" + " " + "main__elem"}
       center={[view.lat, view.lon]}
       zoom={view.zoom}
-      minZoom={10}
     >
       <TileLayer
         attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -53,7 +52,6 @@ export default function Component({
       />
       <Marker position={[userPos.lat, userPos.lon]} icon={userMarker}></Marker>
       {vendors.map((vendor, i) => {
-        const { latitude, longitude } = vendor.location;
         return (
           <Marker
             position={vendor.location}
