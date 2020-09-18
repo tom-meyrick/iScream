@@ -8,14 +8,6 @@
 @import "tags";
 @import "cta";
 
-@media (max-width: $breakpoint-handheld) {
-  .main {
-    &__container {
-      background-image: url("../assets/sprinkles-texture02.jpg");
-    }
-  }
-}
-
 .main {
   &__container {
     max-width: 800px;
@@ -38,8 +30,15 @@
     border: 0.3rem white solid;
   }
 }
+@media (max-width: $breakpoint-tablet) {
+  .main {
+    &__container {
+      background-image: url("../assets/sprinkles-texture02.jpg");
+    }
+  }
+}
 
-@media (min-width: $breakpoint-handheld) {
+@media (min-width: $breakpoint-tablet) {
   .page-wrapper {
     padding: 1rem;
     border-radius: $b-radius;
@@ -49,7 +48,7 @@
   }
 }
 
-@media (min-width: $breakpoint-handheld) and (max-width: $breakpoint-tablet) {
+@media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-large) {
   .main {
     &__container {
       padding: 1rem;
