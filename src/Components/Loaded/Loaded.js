@@ -12,12 +12,12 @@ class Loaded extends Component {
     return loaded ? (
       children
     ) : (
-      <div className="progress">
-        <div
-          className="progress-bar progress-bar-striped active"
-          style={{ width: "100%" }}
-        />{" "}
-      </div>
+      <div class="loading-wrapper">
+
+      <span class="loader"></span>
+    
+      <p>Loading...</p>
+    </div>
     );
   }
 }
