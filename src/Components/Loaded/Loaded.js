@@ -13,11 +13,10 @@ class Loaded extends Component {
       children
     ) : (
       <div class="loading-wrapper">
+        <span class="loader"></span>
 
-      <span class="loader"></span>
-    
-      <p>Loading...</p>
-    </div>
+        <p>Loading...</p>
+      </div>
     );
   }
 }
