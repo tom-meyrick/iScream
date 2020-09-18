@@ -6,6 +6,7 @@
 @import "icons";
 @import "map";
 @import "tags";
+@import "loading";
 
 @media (max-width: $breakpoint-handheld) {
   .main {
@@ -25,6 +26,7 @@
     display: flex;
     flex-direction: column;
   }
+
   &__side-panels {
     // background-color: #fdb2f2;
     background-image: url("../assets/sprinkles-texture02.jpg");

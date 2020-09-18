@@ -7,7 +7,7 @@ const updateID = (state, action) => ({
 
 const loaded = (state, action) => ({
   ...state,
-  loaded: true,
+  // loaded: true,
   vendors: action.vendors,
 });
 
