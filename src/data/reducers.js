@@ -19,7 +19,7 @@ const formSubmit = (state) => ({
 
 const toggleID = (state, action) => ({
   ...state,
-  vendorID: action.vendorID,
+  vendorID: action.vendorID === state.vendorID ? 0 : action.vendorID,
 });
 
 const setLocation = (state, { lat, lon }) => ({
