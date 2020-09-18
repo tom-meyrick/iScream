@@ -3,7 +3,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: $opaque;
+  background-color: $vanilla;
+  padding: 1rem;
 
   &__text {
     margin-top: 1rem;
@@ -19,10 +20,12 @@
     font-size: 4rem;
     padding: 1rem;
     border: 10px solid $pink;
+    box-shadow: 5px 10px;
 
     &:hover {
       background-color: $pink;
       border: 10px solid peachpuff;
+      text-decoration: underline;
     }
   }
 }

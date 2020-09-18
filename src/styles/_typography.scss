@@ -27,7 +27,8 @@ $font-head: "Damion", cursive;
   font-family: $font-head;
   color: yellow;
   margin: auto;
-  text-shadow: 1px 1px 0px palevioletred;
+  // text-shadow: 1px 1px 0px palevioletred;
+  text-shadow: 3px 3px 1px palevioletred;
   background-color: peachpuff;
   border-radius: $b-radius;
   padding: 1rem;
@@ -36,7 +37,6 @@ $font-head: "Damion", cursive;
 
 @media (min-width: $breakpoint-small) and (max-width: $breakpoint-tablet) {
   .logo {
-    text-shadow: 3px 3px 1px palevioletred;
     padding: 1rem;
     font-size: 3rem;
   }
