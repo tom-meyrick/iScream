@@ -25,12 +25,12 @@ Created In Laravel By Gilson Almeida
 UI, layout wireframing and styling by Will Leighton.
 https://github.com/willnjl
 
+## React, Redux Programing
+React-Redux state management. connect redux to api using Axios form Tom Meyrick
 ## Leaflet.js
 leaflet.js react components used for mapping. OSM open source tiles. leaflet Programming by Will Leighton
 https://github.com/willnjl
 
-## React, Redux Programing
-React-Redux state management. connect redux to api using Axios.
 
 
 ## Brief
