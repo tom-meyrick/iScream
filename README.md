@@ -1,6 +1,6 @@
 
 # iScream
-A Full Operationial React and Redux App with a laravel API. using Leaftlet.js for the mapping.
+A Fully Operationial React and Redux App with a laravel API. using Leaftlet.js for the mapping.
 
 Produced of one week by Tom Meyerick, Will Leighton and Gilson Almeida as part of the DevelopMe Codiing Bootcamp. 
 
