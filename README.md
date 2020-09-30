@@ -15,10 +15,11 @@ https://tom-meyrick.github.io/iScream/#/
 - Laravel backend API
 - HTML
 - Sass / CSS
+- Postman
 
 ## Backend API
 
-Created In Laravel By Gilson Almeida
+Back-end Database and API created In Laravel By Gilson Almeida.
 
 ## UX and Design
 
