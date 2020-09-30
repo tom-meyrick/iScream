@@ -12,10 +12,12 @@ https://tom-meyrick.github.io/iScream/#/
 - Redux,
 - Leaflet.js,
 - Axios,
-- Laravel backend API
-- HTML
-- Sass / CSS
-- Postman
+- Laravel backend API,
+- HTML,
+- Sass / CSS,
+- Postman,
+-Git/ GitHub,
+- GitHub Pages,
 
 ## Backend API
 
