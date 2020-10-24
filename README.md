@@ -2,7 +2,7 @@
 # iScream
 A fully operational React and Redux App with a laravel API and a Leaftlet.js map.
 
-Produced in one week by Tom Meyrick, Will Leighton and Gilson Almeida during the DevelopMe Coding Bootcamp. 
+Created in one week by Tom Meyrick, Will Leighton and Gilson Almeida during the DevelopMe Coding Bootcamp. 
 
 You can view the site here: 
 https://tom-meyrick.github.io/iScream/#/
