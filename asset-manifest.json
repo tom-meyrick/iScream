@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/iScream/static/css/main.e858bd4d.chunk.css",
-    "main.js": "/iScream/static/js/main.2dc8d0b0.chunk.js",
-    "main.js.map": "/iScream/static/js/main.2dc8d0b0.chunk.js.map",
+    "main.js": "/iScream/static/js/main.d5961703.chunk.js",
+    "main.js.map": "/iScream/static/js/main.d5961703.chunk.js.map",
     "runtime-main.js": "/iScream/static/js/runtime-main.01a0a665.js",
     "runtime-main.js.map": "/iScream/static/js/runtime-main.01a0a665.js.map",
     "static/css/2.a4567992.chunk.css": "/iScream/static/css/2.a4567992.chunk.css",
     "static/js/2.8dda38d0.chunk.js": "/iScream/static/js/2.8dda38d0.chunk.js",
     "static/js/2.8dda38d0.chunk.js.map": "/iScream/static/js/2.8dda38d0.chunk.js.map",
     "index.html": "/iScream/index.html",
-    "precache-manifest.49b6f55ab8623b2ae4f08cff4947988e.js": "/iScream/precache-manifest.49b6f55ab8623b2ae4f08cff4947988e.js",
+    "precache-manifest.c250fff90c0d5037b26949c02e2bbab9.js": "/iScream/precache-manifest.c250fff90c0d5037b26949c02e2bbab9.js",
     "service-worker.js": "/iScream/service-worker.js",
     "static/css/2.a4567992.chunk.css.map": "/iScream/static/css/2.a4567992.chunk.css.map",
     "static/css/main.e858bd4d.chunk.css.map": "/iScream/static/css/main.e858bd4d.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.a4567992.chunk.css",
     "static/js/2.8dda38d0.chunk.js",
     "static/css/main.e858bd4d.chunk.css",
-    "static/js/main.2dc8d0b0.chunk.js"
+    "static/js/main.d5961703.chunk.js"
   ]
 }

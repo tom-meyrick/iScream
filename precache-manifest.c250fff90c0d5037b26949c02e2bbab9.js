@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d819e72a3b6dfab8fe772c8d51b6fcad",
+    "revision": "9860f926ebfbd31a6ee3425e8032677b",
     "url": "/iScream/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/iScream/static/css/2.a4567992.chunk.css"
   },
   {
-    "revision": "ae19f82742b361d690f8",
+    "revision": "50f47d54b9e22f84d2a0",
     "url": "/iScream/static/css/main.e858bd4d.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/iScream/static/js/2.8dda38d0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ae19f82742b361d690f8",
-    "url": "/iScream/static/js/main.2dc8d0b0.chunk.js"
+    "revision": "50f47d54b9e22f84d2a0",
+    "url": "/iScream/static/js/main.d5961703.chunk.js"
   },
   {
     "revision": "7519005ff9aa56acf14d",
