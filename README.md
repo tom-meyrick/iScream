@@ -16,7 +16,7 @@ https://tom-meyrick.github.io/iScream/#/
 - HTML,
 - Sass / CSS,
 - Postman,
--Git/ GitHub,
+-  Git/ GitHub,
 - GitHub Pages,
 
 ## Backend API

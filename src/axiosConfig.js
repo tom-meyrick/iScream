@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "https://iscream.developme.space/",
+  baseURL: "https://iscream-backend.herokuapp.com/",
   headers: {
     Accept: "application/json",
 
